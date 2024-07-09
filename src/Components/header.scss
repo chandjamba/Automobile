@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  background-color: lightgrey;
+  &__navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+  }
+  &__heading-container {
+    display: flex;
+    height: 30px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__heading {
+    color: #1f62ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  &__input-container {
+    display: flex;
+    height: 20px;
+    width: 180px;
+    align-items: center;
+  }
+  &__input {
+    display: flex;
+    height: 20px;
+    width: 170px;
+    border: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding: 5px;
+  }
+  &__nav-icons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    width: 100px;
+  }
+  &__notification-icon-container {
+    display: flex;
+    border: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+  }
+  &__settings-icon-container {
+    display: flex;
+    border: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+  }
+  &__profile-icon-container {
+    display: flex;
+    border: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+  }
+}
