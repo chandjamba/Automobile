@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: #E6E4E4;
+  background-color: #e6e4e4;
   align-items: center;
   justify-content: center;
   &__rental-car-cards-container {
@@ -19,11 +19,11 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #00BFFF;
+    background-color: #00bfff;
     border: solid;
     border-radius: 15px;
     border-width: 1px;
-    border-color: #00BFFF;
+    border-color: #00bfff;
     align-items: center;
     justify-content: center;
   }
@@ -32,11 +32,11 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #00BFFF;
+    background-color: #00bfff;
     border: solid;
     border-radius: 15px;
     border-width: 1px;
-    border-color: #00BFFF;
+    border-color: #00bfff;
     align-items: center;
     justify-content: center;
   }
@@ -70,13 +70,71 @@
   }
   &__pickup-heading {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   &__pickup-selection-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+  &__pickup-locations-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-locations-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-locations {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-locations:hover {
+    border-color: lightgrey;
+  }
+  &__pickup-date-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-date-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-date {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-date:hover {
+    border-color: lightgrey;
+  }
+  &__pickup-time-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-time-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-time {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-time:hover {
+    border-color: lightgrey;
   }
 
   // Swap button styling. //
@@ -95,9 +153,10 @@
   }
   &__swap-btn:hover {
     border-color: #f7f7f7;
+    font-size: 12px;
   }
 
-  // drop-off conatainer styling. //
+  // drop-off container styling. //
 
   &__dropoff-container {
     display: flex;
@@ -120,12 +179,189 @@
   }
   &__dropoff-heading {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   &__dropoff-selection-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+  &__dropoff-locations-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__dropoff-locations-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__dropoff-locations {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__dropoff-locations:hover {
+    border-color: lightgrey;
+  }
+
+  // Card styling //
+  &__inventory-car-card1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    height: 250px;
+    width: 200px;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.4s;
+  }
+  &__inventory-car-card1:hover {
+    transform: scale(1.1);
+  }
+  &__car-navbar {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+    justify-content: space-between;
+  }
+  &__car-model-info-box {
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    width: 50px;
+    justify-content: space-evenly;
+  }
+  &__car-model-box {
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  &__car-type-box {
+    display: flex;
+    align-items: start;
+    height: 20px;
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+  }
+  &__car-like-btn {
+    display: flex;
+    align-items: center;
+    align-items: start;
+  }
+  &__car-image-box {
+    display: flex;
+    height: 100px;
+    width: 200px;
+  }
+  &__car-image {
+    width: 200px;
+    height: 100px;
+    object-fit: scale-down;
+    opacity: 80%;
+  }
+  &__car-image:hover {
+    opacity: 100%;
+  }
+
+  // Car specifiactions bar styling. //
+  &__car-specifications-bar {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-tank-capacity-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 40px;
+    align-items: center;
+  }
+  &__tank-fuel-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__tank-litres {
+    height: 18px;
+    width: 15px;
+  }
+
+  //Gear Icon styling //
+  &__car-gear-shift-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 70px;
+    align-items: center;
+  }
+  &__car-gear-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__gear-type {
+    height: 18px;
+    width: 15px;
+  }
+
+  &__car-seats-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 80px;
+    align-items: center;
+  }
+  &__car-seats-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__seats-numbers {
+    height: 18px;
+    width: 25px;
+  }
+  &__car-rent-and-btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-rent-per-day {
+    display: flex;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  &__car-rent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    color: #f7f7f7;
+    background-color: #1f62ff;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #1f62ff;
+  }
+  &__car-rent-btn:hover {
+    border-color: #f7f7f7;
   }
 }
