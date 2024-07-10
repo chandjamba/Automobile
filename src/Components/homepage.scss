@@ -1,7 +1,131 @@
 .homepage {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 2rem;
-  background-color: Green;
+  background-color: #E6E4E4;
+  align-items: center;
+  justify-content: center;
+  &__rental-car-cards-container {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 1000px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__rental-car-card1 {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    background-color: #00BFFF;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #00BFFF;
+    align-items: center;
+    justify-content: center;
+  }
+  &__rental-car-card2 {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    background-color: #00BFFF;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #00BFFF;
+    align-items: center;
+    justify-content: center;
+  }
+  &__pick-drop-container {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 950px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  &__pickup-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 350px;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__pickup-heading-box {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    align-items: center;
+  }
+  &__pickup-heading {
+    color: black;
+    font-size: 20px;
+  }
+  &__pickup-selection-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Swap button styling. //
+  &__swap-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    color: #f7f7f7;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: #1f62ff;
+    border-color: #1f62ff;
+  }
+  &__swap-btn:hover {
+    border-color: #f7f7f7;
+  }
+
+  // drop-off conatainer styling. //
+
+  &__dropoff-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 350px;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__dropoff-heading-box {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    align-items: center;
+  }
+  &__dropoff-heading {
+    color: black;
+    font-size: 20px;
+  }
+  &__dropoff-selection-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

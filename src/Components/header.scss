@@ -1,72 +1,88 @@
 .header {
   display: flex;
-  background-color: lightgrey;
+  background-color: #f7f7f7;
   &__navigation-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 80px;
     width: 100%;
   }
   &__heading-container {
     display: flex;
-    height: 30px;
-    width: 120px;
+    height: 35px;
+    width: 150px;
     align-items: center;
     justify-content: center;
   }
   &__heading {
     color: #1f62ff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
   }
   &__input-container {
     display: flex;
     height: 20px;
-    width: 180px;
+    width: 250px;
     align-items: center;
   }
   &__input {
     display: flex;
-    height: 20px;
-    width: 170px;
+    height: 25px;
+    width: 250px;
     border: solid;
-    border-radius: 20px;
+    border-radius: 30px;
     border-width: 1px;
-    border-color: lightgrey;
-    padding: 5px;
+    border-color: #f7f7f7;
+    padding: 8px;
   }
   &__nav-icons-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    height: 20px;
-    width: 100px;
+    justify-content: space-around;
+    height: 50px;
+    width: 120px;
+    margin-right: 5px;
   }
   &__notification-icon-container {
     display: flex;
     border: solid;
+    height: 30px;
+    width: 30px;
     border-radius: 50px;
     border-width: 1px;
-    border-color: black;
+    border-color: #f7f7f7;
     background-color: white;
   }
+  &__notification-icon {
+    display: flex;    
+}
   &__settings-icon-container {
     display: flex;
     border: solid;
+    height: 30px;
+    width: 30px;
     border-radius: 50px;
     border-width: 1px;
-    border-color: black;
+    border-color: #f7f7f7;
     background-color: white;
+  }
+  &__settings-icon {
+    display: flex;
   }
   &__profile-icon-container {
     display: flex;
     border: solid;
+    height: 30px;
+    width: 30px;
     border-radius: 50px;
     border-width: 1px;
-    border-color: black;
+    border-color: #f7f7f7;
     background-color: white;
+  }
+  &__profile-icon {
+    display: flex;
   }
 }
