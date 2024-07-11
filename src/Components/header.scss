@@ -56,8 +56,11 @@
     border-color: #f7f7f7;
     background-color: white;
   }
+  &__notification-icon-container:hover {
+    border-color: black;
+  }
   &__notification-icon {
-    display: flex;    
+    display: flex;
 }
   &__settings-icon-container {
     display: flex;
@@ -68,6 +71,9 @@
     border-width: 1px;
     border-color: #f7f7f7;
     background-color: white;
+  }
+  &__settings-icon-container:hover {
+    border-color: black;
   }
   &__settings-icon {
     display: flex;
@@ -81,6 +87,9 @@
     border-width: 1px;
     border-color: #f7f7f7;
     background-color: white;
+  }
+  &__profile-icon-container:hover {
+    border-color: black;
   }
   &__profile-icon {
     display: flex;

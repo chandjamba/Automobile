@@ -19,26 +19,54 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #00bfff;
+    background-color: #f7f7f7;
     border: solid;
     border-radius: 15px;
     border-width: 1px;
-    border-color: #00bfff;
+    border-color: #f7f7f7;
     align-items: center;
     justify-content: center;
+  }
+  &__rental-car-card1:hover {
+    background-color: lightgrey;
+    border-color: lightgrey;
+  }
+  &__car-card1-image {
+    width: 300px;
+    height: 200px;
+    object-fit: scale-down;
+  }
+  &__car-card1-image:hover {
+    width: 280px;
+    height: 180px;
+    object-fit: scale-down;
   }
   &__rental-car-card2 {
     display: flex;
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #00bfff;
+    background-color: #f7f7f7;
     border: solid;
     border-radius: 15px;
     border-width: 1px;
-    border-color: #00bfff;
+    border-color: #f7f7f7;
     align-items: center;
     justify-content: center;
+  }
+  &__rental-car-card2:hover {
+    background-color: lightgrey;
+    border-color: lightgrey;
+  }
+  &__car-card2-image {
+    width: 300px;
+    height: 200px;
+    object-fit: scale-down;
+  }
+  &__car-card2-image:hover {
+    width: 280px;
+    height: 180px;
+    object-fit: scale-down;
   }
   &__pick-drop-container {
     display: flex;
@@ -209,6 +237,31 @@
   }
 
   // Card styling //
+  &__recommendation-heading-box {
+    display: flex;
+    width: 80%;
+    height: 40px;
+    align-items: center;
+    justify-content: left;
+    padding: 15px;
+    margin-left: 25px;
+  }
+  &__recommendation-heading {
+    display: flex;
+    color:grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__car_cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    justify-content: space-around;
+    
+  }
   &__inventory-car-card1 {
     display: flex;
     flex-direction: column;
@@ -363,5 +416,27 @@
   }
   &__car-rent-btn:hover {
     border-color: #f7f7f7;
+  }
+
+  // Show More Button Styling. //
+  &__show-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    margin: 40px;
+  }
+  &__show-more-btn:hover {
+    border-color: #e6e4e4;
+    font-size: 11px;
   }
 }
