@@ -23,19 +23,25 @@
   }
   &__input-container {
     display: flex;
-    height: 20px;
+    height: 40px;
     width: 250px;
     align-items: center;
   }
   &__input {
     display: flex;
-    height: 25px;
+    height: 40px;
     width: 250px;
     border: solid;
     border-radius: 30px;
     border-width: 1px;
-    border-color: #f7f7f7;
-    padding: 8px;
+    font-size: 12px;
+    font-size: 12px;
+    border-color: #E7E7E7;
+    padding: 10px;
+    outline: none;
+  }
+  &__input:hover {
+    outline: none;
   }
   &__nav-icons-container {
     display: flex;
