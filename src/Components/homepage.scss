@@ -80,8 +80,8 @@
   &__pickup-container {
     display: flex;
     flex-direction: column;
-    height: 100px;
-    width: 350px;
+    height: 120px;
+    width: 400px;
     justify-content: space-around;
     background-color: #f7f7f7;
     border: solid;
@@ -181,7 +181,7 @@
   }
   &__swap-btn:hover {
     border-color: #f7f7f7;
-    font-size: 12px;
+    cursor: pointer;
   }
 
   // drop-off container styling. //
@@ -189,8 +189,8 @@
   &__dropoff-container {
     display: flex;
     flex-direction: column;
-    height: 100px;
-    width: 350px;
+    height: 120px;
+    width: 400px;
     justify-content: space-around;
     background-color: #f7f7f7;
     border: solid;
@@ -257,7 +257,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
+    width: 82%;
     height: 100%;
     justify-content: space-around;
     
@@ -267,19 +267,19 @@
     flex-direction: column;
     background-color: #f7f7f7;
     height: 250px;
-    width: 200px;
+    width: 250px;
     border: solid;
     border-radius: 10px;
     border-width: 1px;
     border-color: #f7f7f7;
-    padding: 15px;
     margin-bottom: 10px;
     justify-content: space-around;
     align-items: center;
     transition: transform 0.4s;
+    padding: 1rem;
   }
   &__inventory-car-card1:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   &__car-navbar {
     display: flex;
@@ -406,7 +406,7 @@
     justify-content: center;
     width: 70px;
     height: 30px;
-    font-size: 10px;
+    font-size: 11px;
     color: #f7f7f7;
     background-color: #1f62ff;
     border: solid;
@@ -416,6 +416,7 @@
   }
   &__car-rent-btn:hover {
     border-color: #f7f7f7;
+    cursor: pointer;
   }
 
   // Show More Button Styling. //
@@ -437,6 +438,6 @@
   }
   &__show-more-btn:hover {
     border-color: #e6e4e4;
-    font-size: 11px;
+    cursor: pointer;
   }
 }
