@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   align-items: center;
   justify-content: center;
   &__rental-car-cards-container {
@@ -248,7 +248,7 @@
   }
   &__recommendation-heading {
     display: flex;
-    color:grey;
+    color: grey;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -260,7 +260,6 @@
     width: 80%;
     height: 100%;
     justify-content: space-around;
-    
   }
   &__inventory-car-card1 {
     display: flex;
@@ -272,7 +271,7 @@
     border-radius: 10px;
     border-width: 1px;
     border-color: #f7f7f7;
-    padding: 15px;
+    padding: 5px;
     margin-bottom: 10px;
     justify-content: space-around;
     align-items: center;

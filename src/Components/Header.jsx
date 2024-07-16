@@ -17,7 +17,7 @@ export default function Header() {
         <div className="header__nav-icons-container">
           <div className="header__notification-icon-container">
             <svg
-            className="header__notification-icon"
+              className="header__notification-icon"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -37,9 +37,10 @@ export default function Header() {
             </svg>
           </div>
           <div className="header__profile-icon-container">
-          <img src="https://img.icons8.com/?size=100&id=84898&format=png&color=000000"
-               className="header__profile-icon"
-          ></img>
+            <img
+              src="https://img.icons8.com/?size=100&id=84898&format=png&color=000000"
+              className="header__profile-icon"
+            ></img>
           </div>
         </div>
       </div>
