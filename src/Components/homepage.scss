@@ -19,7 +19,12 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #f7f7f7;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(28, 142, 210) 0%,
+      rgb(113, 192, 244) 47.3%,
+      rgb(139, 238, 230) 88.4%
+    );
     border: solid;
     border-radius: 15px;
     border-width: 1px;
@@ -27,9 +32,53 @@
     align-items: center;
     justify-content: center;
   }
-  &__rental-car-card1:hover {
-    background-color: #e7e7e7;
-    border-color: #e7e7e7;
+
+  &__card1-inside-components-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 450px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  &__card-heading1-box {
+    display: flex;
+    height: 40px;
+    width: 150px;
+  }
+  &__card-heading1 {
+    color: #f7f7f7;
+    font-size: medium;
+    font-weight: bolder;
+  }
+  &__card-heading2-box {
+    display: flex;
+    height: 40px;
+    width: 165px;
+  }
+  &__card-heading2 {
+    color: #f7f7f7;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  &__card-btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    cursor: pointer;
+  }
+  &__card-btn1:hover {
+    border-color: #f0ffff;
   }
   &__car-card1-image {
     width: 300px;
@@ -42,7 +91,12 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    background-color: #f7f7f7;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(28, 142, 210) 0%,
+      rgb(113, 192, 244) 47.3%,
+      rgb(139, 238, 230) 88.4%
+    );
     border: solid;
     border-radius: 15px;
     border-width: 1px;
@@ -50,9 +104,53 @@
     align-items: center;
     justify-content: center;
   }
-  &__rental-car-card2:hover {
-    background-color: #e7e7e7;
-    border-color: #e7e7e7;
+
+  &__card-2-inside-components-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 450px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  &__card-heading-1-box {
+    display: flex;
+    height: 40px;
+    width: 150px;
+  }
+  &__card-heading-1 {
+    color: #f7f7f7;
+    font-size: medium;
+    font-weight: bolder;
+  }
+  &__card-heading-2-box {
+    display: flex;
+    height: 40px;
+    width: 160px;
+  }
+  &__card-heading-2 {
+    color: #f7f7f7;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  &__card-btn-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    cursor: pointer;
+  }
+  &__card-btn-1:hover {
+    border-color: #f0ffff;
   }
   &__car-card2-image {
     width: 300px;
