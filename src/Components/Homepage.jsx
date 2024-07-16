@@ -5,6 +5,11 @@ export default function Homepage() {
     <div className="homepage">
       <div className="homepage__rental-car-cards-container">
         <div className="homepage__rental-car-card1">
+          <div className="homepage__card1-inside-components-wrapper">
+            <div className="homepage__card-heading1-box">
+              <h1 className="homepage__car-heading1">The Best Platform for Car Rental</h1>
+            </div>
+          </div>
           <img
             className="homepage__car-card1-image"
             src="https://inventory-assets.motocommerce.ca/build_and_price/volkswagen/815761424/l4l4"
