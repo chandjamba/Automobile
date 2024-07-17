@@ -52,8 +52,43 @@ export default function CategoryCarRent() {
               <p className="categoryCarRent__type-filter6">Hatchback</p>
             </div>
           </div>
+
+          <div className="categoryCarRent__seats-filter-box">
+            <div className="categoryCarRent__seats-filter-heading-box">
+              <p className="categoryCarRent__seats-filter-heading">CAPACITY</p>
+            </div>
+            <div className="categoryCarRent__seats-check1-box">
+              <input
+                type="checkbox"
+                className="categoryCarRent__seats-filter-check1"
+              />
+              <p className="categoryCarRent__seats-filter1">2/Person</p>
+            </div>
+            <div className="categoryCarRent__seats-check2-box">
+              <input
+                type="checkbox"
+                className="categoryCarRent__seats-type-filter-check2"
+              />
+              <p className="categoryCarRent__seats-filter2">4/Person</p>
+            </div>
+            <div className="categoryCarRent__seats-check3-box">
+              <input
+                type="checkbox"
+                className="categoryCarRent__seats-filter-check3"
+              />
+              <p className="categoryCarRent__seats-filter3">4/Person</p>
+            </div>
+            <div className="categoryCarRent__seats-check4-box">
+              <input
+                type="checkbox"
+                className="categoryCarRent__seats-filter-check4"
+              />
+              <p className="categoryCarRent__seats-filter4">8/More</p>
+            </div>
+          </div>
         </div>
       </div>
+
       <div className="categoryCarRent__cards-side-wrapper">
         <div className="categoryCarRent__pick-drop-container">
           <div className="categoryCarRent__pickup-container">
@@ -138,11 +173,11 @@ export default function CategoryCarRent() {
             </div>
           </div>
         </div>
-        <div className="categoryCarRent__recommendation-heading-box">
+        {/* <div className="categoryCarRent__recommendation-heading-box">
           <p className="categoryCarRent__recommendation-heading">
             Recommendation Car
           </p>
-        </div>
+        </div> */}
         <div className="categoryCarRent__car_cards-wrapper">
           <div className="categoryCarRent__inventory-car-card1">
             <div className="categoryCarRent__car-navbar">

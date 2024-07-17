@@ -8,7 +8,7 @@
   &__filter-sidebar {
     display: flex;
     flex-direction: column;
-    height: 1300px;
+    height: 100%;
     width: 20%;
     background-color: #f7f7f7;
     padding: 1rem;
@@ -16,15 +16,15 @@
   &__all-filter-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 20%;
+    height: 1250px;
+    width: 10%;
     background-color: #f7f7f7;
   }
   &__type-filter-box {
     display: flex;
     flex-direction: column;
     height: 200px;
-    width: 20%;
+    width: 10%;
     justify-content: space-around;
   }
   &__type-filter-heading-box {
@@ -59,6 +59,50 @@
   &__type-filter4,
   &__type-filter5,
   &__type-filter6 {
+    color: black;
+    font-size: 12px;
+  }
+  // Car seats capacity filter checkbox styling. //
+  &__seats-filter-box {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 10%;
+    justify-content: space-around;
+    margin: 20px 0 0 0;
+  }
+  &__seats-filter-heading-box {
+    display: flex;
+    width: 20%;
+    height: 30px;
+  }
+  &__seats-filter-heading {
+    color: black;
+    font-size: 10px;
+  }
+  &__seats-check1-box,
+  &__seats-check2-box,
+  &__seats-check3-box,
+  &__seats-check4-box,
+  &__seats-check5-box,
+  &__seats-check6-box {
+    display: flex;
+    flex-direction: row;
+  }
+  &__seats-filter-check1,
+  &__seats-filter-check2,
+  &__seats-filter-check3,
+  &__seats-filter-check4,
+  &__seats-filter-check5,
+  &__seats-filter-check6 {
+    display: flex;
+  }
+  &__seats-filter1,
+  &__seats-filter2,
+  &__seats-filter3,
+  &__seats-filter4,
+  &__seats-filter5,
+  &__seats-filter6 {
     color: black;
     font-size: 12px;
   }
@@ -226,33 +270,33 @@
     display: flex;
     flex-direction: row;
     height: 120px;
-    width: 950px;
+    width: 910px;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
   }
   &__pickup-container {
     display: flex;
     flex-direction: column;
     height: 120px;
-    width: 400px;
+    width: 320px;
     justify-content: space-around;
     background-color: #f7f7f7;
     border: solid;
     border-radius: 15px;
     border-width: 1px;
     border-color: #f7f7f7;
-    padding: 1rem;
+    padding: 10px;
   }
   &__pickup-heading-box {
     display: flex;
-    width: 80px;
+    width: 50px;
     height: 20px;
     align-items: center;
   }
   &__pickup-heading {
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
   }
   &__pickup-selection-container {
@@ -260,14 +304,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 280px;
   }
   &__pickup-locations-box {
     display: flex;
     flex-direction: column;
+    width: 70px;
   }
   &__pickup-locations-heading {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
   }
   &__pickup-locations {
     display: flex;
@@ -275,7 +322,8 @@
     border-width: 1px;
     border-radius: 15px;
     border-color: #f7f7f7;
-    padding: 5px;
+    padding: 3px;
+    width: 70px;
   }
   &__pickup-locations:hover {
     border-color: lightgrey;
@@ -283,10 +331,12 @@
   &__pickup-date-box {
     display: flex;
     flex-direction: column;
+    width: 90px;
   }
   &__pickup-date-heading {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
   }
   &__pickup-date {
     display: flex;
@@ -294,7 +344,8 @@
     border-width: 1px;
     border-radius: 15px;
     border-color: #f7f7f7;
-    padding: 5px;
+    padding: 3px;
+    width: 90px;
   }
   &__pickup-date:hover {
     border-color: lightgrey;
@@ -302,10 +353,12 @@
   &__pickup-time-box {
     display: flex;
     flex-direction: column;
+    width: 90px;
   }
   &__pickup-time-heading {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
   }
   &__pickup-time {
     display: flex;
@@ -313,7 +366,8 @@
     border-width: 1px;
     border-radius: 15px;
     border-color: #f7f7f7;
-    padding: 5px;
+    padding: 2px;
+    width: 90px;
   }
   &__pickup-time:hover {
     border-color: lightgrey;
@@ -344,7 +398,7 @@
     display: flex;
     flex-direction: column;
     height: 120px;
-    width: 400px;
+    width: 320px;
     justify-content: space-around;
     background-color: #f7f7f7;
     border: solid;
@@ -355,13 +409,13 @@
   }
   &__dropoff-heading-box {
     display: flex;
-    width: 80px;
+    width: 60px;
     height: 20px;
     align-items: center;
   }
   &__dropoff-heading {
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
   }
   &__dropoff-selection-container {
@@ -373,10 +427,12 @@
   &__dropoff-locations-box {
     display: flex;
     flex-direction: column;
+    width: 70px;
   }
   &__dropoff-locations-heading {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
   }
   &__dropoff-locations {
     display: flex;
@@ -384,7 +440,8 @@
     border-width: 1px;
     border-radius: 15px;
     border-color: #f7f7f7;
-    padding: 5px;
+    padding: 3px;
+    width: 70px;
   }
   &__dropoff-locations:hover {
     border-color: lightgrey;
@@ -411,7 +468,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 82%;
+    width: 90%;
     height: 100%;
     justify-content: space-around;
   }
@@ -420,7 +477,7 @@
     flex-direction: column;
     background-color: #f7f7f7;
     height: 250px;
-    width: 250px;
+    width: 200px;
     border: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -438,7 +495,7 @@
   &__car-navbar {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 150px;
     height: 50px;
     justify-content: space-between;
   }
@@ -471,10 +528,10 @@
   &__car-image-box {
     display: flex;
     height: 100px;
-    width: 200px;
+    width: 150px;
   }
   &__car-image {
-    width: 200px;
+    width: 150px;
     height: 100px;
     object-fit: scale-down;
     opacity: 80%;
@@ -488,62 +545,65 @@
     display: flex;
     flex-direction: row;
     height: 30px;
-    width: 200px;
+    width: 160px;
     align-items: center;
     justify-content: space-between;
   }
   &__car-tank-capacity-box {
     display: flex;
     flex-direction: row;
-    height: 30px;
-    width: 40px;
+    height: 25px;
+    width: 30px;
     align-items: center;
   }
   &__tank-fuel-icon {
-    height: 18px;
-    width: 15px;
+    height: 15px;
+    width: 12px;
   }
   &__tank-litres {
     height: 18px;
     width: 15px;
+    font-size: 13px;
   }
 
   //Gear Icon styling //
   &__car-gear-shift-box {
     display: flex;
     flex-direction: row;
-    height: 30px;
-    width: 70px;
+    height: 25px;
+    width: 60px;
     align-items: center;
   }
   &__car-gear-icon {
-    height: 18px;
+    height: 15px;
     width: 15px;
   }
   &__gear-type {
     height: 18px;
     width: 15px;
+    font-size: 13px;
   }
 
   &__car-seats-box {
     display: flex;
     flex-direction: row;
-    height: 30px;
-    width: 80px;
+    height: 25px;
+    width: 60px;
     align-items: center;
   }
   &__car-seats-icon {
-    height: 18px;
+    height: 15px;
     width: 15px;
   }
   &__seats-numbers {
     height: 18px;
     width: 25px;
+    font-size: 13px;
   }
   &__car-rent-and-btn-container {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 150px;
     height: 40px;
     align-items: center;
     justify-content: space-between;
