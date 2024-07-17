@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./homepage.scss";
 
 export default function Homepage() {
@@ -17,7 +18,12 @@ export default function Homepage() {
                 low price.
               </p>
             </div>
-            <button className="homepage__card-btn1">Rental Car</button>
+            <Link
+              to={"/Homepage/CategoryCarRent"}
+              className="homepage__card-btn1"
+            >
+              Rental Car
+            </Link>
           </div>
           <img
             className="homepage__car-card1-image"
@@ -37,7 +43,12 @@ export default function Homepage() {
                 facilities.
               </p>
             </div>
-            <button className="homepage__card-btn-1">Rental Car</button>
+            <Link
+              to={"/Homepage/CategoryCarRent"}
+              className="homepage__card-btn-1"
+            >
+              Rental Car
+            </Link>
           </div>
           <img
             className="homepage__car-card2-image"

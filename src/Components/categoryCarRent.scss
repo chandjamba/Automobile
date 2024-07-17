@@ -1,0 +1,597 @@
+.categoryCarRent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  &__filter-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 1300px;
+    width: 20%;
+    background-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__all-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    background-color: #f7f7f7;
+  }
+  &__type-filter-box {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 20%;
+    justify-content: space-around;
+  }
+  &__type-filter-heading-box {
+    display: flex;
+    width: 20%;
+    height: 30px;
+  }
+  &__type-filter-heading {
+    color: black;
+    font-size: 10px;
+  }
+  &__check1-box,
+  &__check2-box,
+  &__check3-box,
+  &__check4-box,
+  &__check5-box,
+  &__check6-box {
+    display: flex;
+    flex-direction: row;
+  }
+  &__type-filter-check1,
+  &__type-filter-check2,
+  &__type-filter-check3,
+  &__type-filter-check4,
+  &__type-filter-check5,
+  &__type-filter-check6 {
+    display: flex;
+  }
+  &__type-filter1,
+  &__type-filter2,
+  &__type-filter3,
+  &__type-filter4,
+  &__type-filter5,
+  &__type-filter6 {
+    color: black;
+    font-size: 12px;
+  }
+  &__cards-side-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    padding: 1rem;
+  }
+  &__rental-car-cards-container {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 1000px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__rental-car-card1 {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(28, 142, 210) 0%,
+      rgb(113, 192, 244) 47.3%,
+      rgb(139, 238, 230) 88.4%
+    );
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card1-inside-components-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 450px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  &__card-heading1-box {
+    display: flex;
+    height: 40px;
+    width: 150px;
+  }
+  &__card-heading1 {
+    color: #f7f7f7;
+    font-size: medium;
+    font-weight: bolder;
+  }
+  &__card-heading2-box {
+    display: flex;
+    height: 40px;
+    width: 165px;
+  }
+  &__card-heading2 {
+    color: #f7f7f7;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  &__card-btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    cursor: pointer;
+  }
+  &__card-btn1:hover {
+    border-color: #f0ffff;
+  }
+  &__car-card1-image {
+    width: 300px;
+    height: 200px;
+    object-fit: scale-down;
+  }
+
+  &__rental-car-card2 {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(28, 142, 210) 0%,
+      rgb(113, 192, 244) 47.3%,
+      rgb(139, 238, 230) 88.4%
+    );
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-2-inside-components-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 450px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  &__card-heading-1-box {
+    display: flex;
+    height: 40px;
+    width: 150px;
+  }
+  &__card-heading-1 {
+    color: #f7f7f7;
+    font-size: medium;
+    font-weight: bolder;
+  }
+  &__card-heading-2-box {
+    display: flex;
+    height: 40px;
+    width: 160px;
+  }
+  &__card-heading-2 {
+    color: #f7f7f7;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  &__card-btn-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    cursor: pointer;
+  }
+  &__card-btn-1:hover {
+    border-color: #f0ffff;
+  }
+  &__car-card2-image {
+    width: 300px;
+    height: 200px;
+    object-fit: scale-down;
+  }
+
+  &__pick-drop-container {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 950px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  &__pickup-container {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: 400px;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__pickup-heading-box {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    align-items: center;
+  }
+  &__pickup-heading {
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-selection-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__pickup-locations-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-locations-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-locations {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-locations:hover {
+    border-color: lightgrey;
+  }
+  &__pickup-date-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-date-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-date {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-date:hover {
+    border-color: lightgrey;
+  }
+  &__pickup-time-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pickup-time-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__pickup-time {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__pickup-time:hover {
+    border-color: lightgrey;
+  }
+
+  // Swap button styling. //
+  &__swap-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    color: #f7f7f7;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: #1f62ff;
+    border-color: #1f62ff;
+  }
+  &__swap-btn:hover {
+    border-color: #f7f7f7;
+    cursor: pointer;
+  }
+
+  // drop-off container styling. //
+
+  &__dropoff-container {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: 400px;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    border: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__dropoff-heading-box {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    align-items: center;
+  }
+  &__dropoff-heading {
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__dropoff-selection-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__dropoff-locations-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__dropoff-locations-heading {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__dropoff-locations {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #f7f7f7;
+    padding: 5px;
+  }
+  &__dropoff-locations:hover {
+    border-color: lightgrey;
+  }
+
+  // Card styling //
+  &__recommendation-heading-box {
+    display: flex;
+    width: 80%;
+    height: 40px;
+    align-items: center;
+    justify-content: left;
+    padding: 15px;
+    margin-left: 25px;
+  }
+  &__recommendation-heading {
+    display: flex;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__car_cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 82%;
+    height: 100%;
+    justify-content: space-around;
+  }
+  &__inventory-car-card1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    height: 250px;
+    width: 250px;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.4s;
+    padding: 1rem;
+  }
+  &__inventory-car-card1:hover {
+    transform: scale(0.9);
+    border-color: #e7e7e7;
+  }
+  &__car-navbar {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+    justify-content: space-between;
+  }
+  &__car-model-info-box {
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    width: 50px;
+    justify-content: space-evenly;
+  }
+  &__car-model-box {
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  &__car-type-box {
+    display: flex;
+    align-items: start;
+    height: 20px;
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+  }
+  &__car-like-btn {
+    display: flex;
+    align-items: center;
+    align-items: start;
+  }
+  &__car-image-box {
+    display: flex;
+    height: 100px;
+    width: 200px;
+  }
+  &__car-image {
+    width: 200px;
+    height: 100px;
+    object-fit: scale-down;
+    opacity: 80%;
+  }
+  &__car-image:hover {
+    opacity: 100%;
+  }
+
+  // Car specifications bar styling. //
+  &__car-specifications-bar {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-tank-capacity-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 40px;
+    align-items: center;
+  }
+  &__tank-fuel-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__tank-litres {
+    height: 18px;
+    width: 15px;
+  }
+
+  //Gear Icon styling //
+  &__car-gear-shift-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 70px;
+    align-items: center;
+  }
+  &__car-gear-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__gear-type {
+    height: 18px;
+    width: 15px;
+  }
+
+  &__car-seats-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 80px;
+    align-items: center;
+  }
+  &__car-seats-icon {
+    height: 18px;
+    width: 15px;
+  }
+  &__seats-numbers {
+    height: 18px;
+    width: 25px;
+  }
+  &__car-rent-and-btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-rent-per-day {
+    display: flex;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  &__car-rent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    font-size: 11px;
+    color: #f7f7f7;
+    background-color: #1f62ff;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #1f62ff;
+  }
+  &__car-rent-btn:hover {
+    border-color: #f7f7f7;
+    cursor: pointer;
+  }
+
+  // Show More Button Styling. //
+  &__show-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1f62ff;
+    color: #f7f7f7;
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #1f62ff;
+    margin: 40px;
+  }
+  &__show-more-btn:hover {
+    border-color: #e6e4e4;
+    cursor: pointer;
+  }
+}
