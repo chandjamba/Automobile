@@ -44,6 +44,10 @@
   &__check6-box {
     display: flex;
     flex-direction: row;
+    width: 60px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
   }
   &__type-filter-check1,
   &__type-filter-check2,
@@ -61,6 +65,8 @@
   &__type-filter6 {
     color: black;
     font-size: 12px;
+    align-items: center;
+    width: 40px;
   }
   // Car seats capacity filter checkbox styling. //
   &__seats-filter-box {
@@ -88,6 +94,10 @@
   &__seats-check6-box {
     display: flex;
     flex-direction: row;
+    width: 60px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
   }
   &__seats-filter-check1,
   &__seats-filter-check2,
@@ -105,6 +115,8 @@
   &__seats-filter6 {
     color: black;
     font-size: 12px;
+    width: 40px;
+    align-items: center;
   }
   &__cards-side-wrapper {
     display: flex;
