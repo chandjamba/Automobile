@@ -1,0 +1,235 @@
+.create__car {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  &-form {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 400px;
+    background-color: lightgrey;
+    justify-content: center;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+  }
+  &-form-main-heading {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  &-appearance-box {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 300px;
+    justify-content: space-around;
+    margin: 10px 0 10px 30px;
+  }
+  &-model-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-model-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+  }
+  &-color-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-color-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+    color: black;
+  }
+  &-make-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-make-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+  }
+  &-seats-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-seats-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+  }
+  &-type-input {
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+    width: 250px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 10px 28px;
+  }
+  &-type-input-headings {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+    margin-left: 30px;
+  }
+
+  &-type-input-1-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-type-input-2-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-type-input-3-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-type-input-4-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-engine-type-input-container {
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+    width: 150px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 10px 28px;
+  }
+  &-engine-type-input-headings {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+    margin-left: 30px;
+  }
+  &-engine-type-input-1-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-engine-type-input-2-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+  }
+  &-fuel-tank-capacity-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+    margin-left: 30px;
+  }
+  &-fuel-tank-capacity-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+    margin: 10px 0 10px 30px;
+  }
+  &-rent-price-input-heading {
+    font-size: smaller;
+    font-weight: 10px;
+    color: black;
+    margin-left: 30px;
+  }
+  &-rent-price-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+    margin: 10px 0 10px 30px;
+  }
+  &-form-btns {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &-form-submit-btn {
+    display: flex;
+    padding: 2px;
+    width: 70px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: grey;
+  }
+  &-form-submit-btn:hover {
+    background-color: #007fff;
+    color: white;
+    border-color: #007fff;
+  }
+  &-form-cancel-btn {
+    display: flex;
+    padding: 2px;
+    width: 70px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: grey;
+  }
+  &-form-cancel-btn:hover {
+    background-color: #ff0800;
+    color: white;
+    border-color: #ff0800;
+  }
+}
