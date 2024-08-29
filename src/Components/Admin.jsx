@@ -39,6 +39,24 @@ const Admin = () => {
     event.target.type.value = "";
   };
 
+  const createMakeOnSubmitHandler = async (event) => {
+    event.preventDefault();
+    try {
+      await databases.createDocument(
+        import.meta.env.VITE_APPWRITE_DATABASE_ID,
+        import.meta.env.VITE_APPWRITE_CAR_MAKE_COLLECTION_ID,
+        ID.unique(),
+        {
+          makeId: ID.unique(),
+          makeCompanyName: event.target.make.value,
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+    event.target.make.value = "";
+  };
+
   useEffect(() => {
     function getModels() {
       try {
@@ -62,7 +80,7 @@ const Admin = () => {
         databases
           .listDocuments(
             import.meta.env.VITE_APPWRITE_DATABASE_ID,
-            import.meta.env.VITE_APPWRITE_CAR_MODELS_COLLECTION_ID,
+            import.meta.env.VITE_APPWRITE_CAR_TYPES_COLLECTION_ID,
             []
           )
           .then((resp) => console.log(resp));
@@ -71,6 +89,23 @@ const Admin = () => {
       }
     }
     getTypes();
+  }, []);
+
+  useEffect(() => {
+    function getMake() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_MAKE_COLLECTION_ID,
+            []
+          )
+          .then((resp) => console.log(resp));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getMake();
   }, []);
   return (
     <div>
@@ -92,6 +127,16 @@ const Admin = () => {
           name="type"
         />
         <button className="btn#2">Create Type</button>
+      </form>
+
+      <form onSubmit={createMakeOnSubmitHandler}>
+        <input
+          className="input_3"
+          placeholder="Enter"
+          type="text"
+          name="make"
+        />
+        <button className="btn#3">Create Make</button>
       </form>
     </div>
   );

@@ -95,42 +95,24 @@
     border-color: grey;
     outline: none;
   }
-  &-type-input {
-    display: flex;
-    flex-direction: row;
-    height: 15px;
-    width: 250px;
-    align-items: center;
-    justify-content: space-around;
-    margin: 10px 0 10px 28px;
-  }
   &-type-input-headings {
     font-size: smaller;
     font-weight: 10px;
     color: black;
-    margin-left: 30px;
+    margin: 10px 0 10px 30px;
+  }
+  &-type-input {
+    display: flex;
+    width: 200px;
+    padding: 3px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    outline: none;
+    margin: 0 0 10px 30px;
   }
 
-  &-type-input-1-heading {
-    font-size: smaller;
-    font-weight: 10px;
-    color: black;
-  }
-  &-type-input-2-heading {
-    font-size: smaller;
-    font-weight: 10px;
-    color: black;
-  }
-  &-type-input-3-heading {
-    font-size: smaller;
-    font-weight: 10px;
-    color: black;
-  }
-  &-type-input-4-heading {
-    font-size: smaller;
-    font-weight: 10px;
-    color: black;
-  }
   &-engine-type-input-container {
     display: flex;
     flex-direction: row;

@@ -1,6 +1,72 @@
+import { useEffect, useState } from "react";
 import "./createCarFormPage.scss";
+import { databases } from "../lib/appwrite";
 
 export default function CreateCarFormPage() {
+  const [carModels, setCarModels] = useState();
+  const [carTypes, setCarTypes] = useState();
+  const [carMakes, setCarMakes] = useState();
+
+  useEffect(() => {
+    function getModels() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_MODELS_COLLECTION_ID,
+            []
+          )
+          .then((resp) => {
+            setCarModels(resp.documents);
+            console.log(resp.documents);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getModels();
+  }, []);
+
+  useEffect(() => {
+    function getTypes() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_TYPES_COLLECTION_ID,
+            []
+          )
+          .then((resp) => {
+            setCarTypes(resp.documents);
+            console.log(resp.documents);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getTypes();
+  }, []);
+
+  useEffect(() => {
+    function getMakes() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_MAKE_COLLECTION_ID,
+            []
+          )
+          .then((resp) => {
+            setCarMakes(resp.documents);
+            console.log(resp.documents);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getMakes();
+  }, []);
+
   return (
     <div className="create__car">
       <form className="create__car-form">
@@ -9,10 +75,20 @@ export default function CreateCarFormPage() {
         </div>
         <div className="create__car-appearance-box">
           <p className="create__car-model-input-heading">Model</p>
-          <input className="create__car-model-input" type="text" />
+          <select className="create__car-model-input">
+            {carModels?.map((carModel) => {
+              return <option key={carModel?.$id}>{carModel?.modelName}</option>;
+            })}
+          </select>
           <p className="create__car-make-input-heading">Make</p>
 
-          <input className="create__car-make-input" type="text" />
+          <select className="create__car-make-input">
+            {carMakes?.map((carMake) => {
+              return (
+                <option key={carMake.$id}>{carMake?.makeCompanyName}</option>
+              );
+            })}
+          </select>
           <p className="create__car-color-input-heading">Color</p>
 
           <input className="create__car-color-input" type="text" />
@@ -21,28 +97,11 @@ export default function CreateCarFormPage() {
           <input className="create__car-seats-input" type="number" />
         </div>
         <p className="create__car-type-input-headings">Select Type</p>
-        <div className="create__car-type-input">
-          <input
-            className="create__car-type-input-1"
-            type="radio"
-            name="coupe"
-          />
-          <label className="create__car-type-input-1-heading">Coupe</label>
-          <input
-            className="create__car-type-input-2"
-            type="radio"
-            name="sedan"
-          />
-          <label className="create__car-type-input-2-heading">Sedan</label>
-          <input className="create__car-type-input-3" type="radio" name="SUV" />
-          <label className="create__car-type-input-3-heading">SUV</label>
-          <input
-            className="create__car-type-input-4"
-            type="radio"
-            name="sport "
-          />
-          <label className="create__car-type-input-4-heading">Sport</label>
-        </div>
+        <select className="create__car-type-input">
+          {carTypes?.map((carType) => {
+            return <option key={carType.$id}>{carType?.typeName}</option>;
+          })}
+        </select>
         <p className="create__car-engine-type-input-headings">
           {" "}
           Gear Transmission
