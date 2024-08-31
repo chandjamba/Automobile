@@ -6,6 +6,7 @@ export default function CreateCarFormPage() {
   const [carModels, setCarModels] = useState();
   const [carTypes, setCarTypes] = useState();
   const [carMakes, setCarMakes] = useState();
+  const [carColor, setCarColor] = useState();
 
   useEffect(() => {
     function getModels() {
@@ -67,6 +68,26 @@ export default function CreateCarFormPage() {
     getMakes();
   }, []);
 
+  useEffect(() => {
+    function getColor() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_COLOR_COLLECTION_ID,
+            []
+          )
+          .then((resp) => {
+            setCarColor(resp?.documents);
+            console.log(resp?.documents);
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getColor();
+  }, []);
+
   return (
     <div className="create__car">
       <form className="create__car-form">
@@ -91,7 +112,22 @@ export default function CreateCarFormPage() {
           </select>
           <p className="create__car-color-input-heading">Color</p>
 
-          <input className="create__car-color-input" type="text" />
+          <input
+            className="create__car-color-input"
+            type="text"
+            placeholder="Enter here..."
+            value={carColor?.colorName}
+            onChange={(event) => {
+              console.log(event.target.value);
+
+              setCarColor((pureState) => {
+                return {
+                  ...pureState,
+                  color: event.target.value,
+                };
+              });
+            }}
+          />
           <p className="create__car-seats-input-heading">Seats</p>
 
           <input className="create__car-seats-input" type="number" />

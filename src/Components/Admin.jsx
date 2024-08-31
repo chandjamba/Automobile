@@ -57,6 +57,24 @@ const Admin = () => {
     event.target.make.value = "";
   };
 
+  const createColorOnSubmitHandler = async (event) => {
+    event.preventDefault();
+    try {
+      await databases.createDocument(
+        import.meta.env.VITE_APPWRITE_DATABASE_ID,
+        import.meta.env.VITE_APPWRITE_CAR_COLOR_COLLECTION_ID,
+        ID.unique(),
+        {
+          colorId: ID.unique(),
+          colorName: event.target.color.value,
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+    event.target.color.value = "";
+  };
+
   useEffect(() => {
     function getModels() {
       try {
@@ -107,6 +125,24 @@ const Admin = () => {
     }
     getMake();
   }, []);
+
+  useEffect(() => {
+    function getColor() {
+      try {
+        databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_CAR_COLOR_COLLECTION_ID,
+            []
+          )
+          .then((resp) => console.log(resp));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getColor();
+  }, []);
+
   return (
     <div>
       <form onSubmit={createModelOnSubmitHandler}>
@@ -118,7 +154,6 @@ const Admin = () => {
         />
         <button className="btn#1">Create Model</button>
       </form>
-
       <form onSubmit={createTypeOnSubmitHandler}>
         <input
           className="input_2"
@@ -128,7 +163,6 @@ const Admin = () => {
         />
         <button className="btn#2">Create Type</button>
       </form>
-
       <form onSubmit={createMakeOnSubmitHandler}>
         <input
           className="input_3"
@@ -137,6 +171,15 @@ const Admin = () => {
           name="make"
         />
         <button className="btn#3">Create Make</button>
+      </form>
+      <form onSubmit={createColorOnSubmitHandler}>
+        <input
+          className="input_4"
+          placeholder="Enter"
+          type="text"
+          name="color"
+        />
+        <button className="btn#4">Create Color</button>
       </form>
     </div>
   );
