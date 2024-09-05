@@ -10,7 +10,23 @@ export default function CreateCarFormPage() {
   const [selectedCarColor, setSelectedCarColor] = useState();
   const [carTypes, setCarTypes] = useState();
   const [selectedCarType, setSelectedCarType] = useState();
-  const [selectedCarEngineType, setSelectedCarEngineType] = useState();
+
+  function submitButtonHandler(event) {
+    event.preventDefault();
+    const data = {
+      carModel: event.target.carModel.value,
+      carMake: event.target.carMake.value,
+      carColor: event.target.carColor.value,
+      seats: event.target.seats.value,
+      carType: event.target.carType.value,
+      engineType: event.target.engineType.value,
+      fuelTank: event.target.fuelTank.value,
+      carRent: event.target.carRent.value,
+    };
+    console.log(data);
+
+
+  }
 
   useEffect(() => {
     function getModels() {
@@ -74,7 +90,7 @@ export default function CreateCarFormPage() {
 
   return (
     <div className="create__car">
-      <form className="create__car-form">
+      <form className="create__car-form" onSubmit={submitButtonHandler}>
         <div className="create__car-form-main-heading">
           Vehicle Registration Form
         </div>
@@ -125,7 +141,14 @@ export default function CreateCarFormPage() {
           />
           <p className="create__car-seats-input-heading">Seats</p>
 
-          <input className="create__car-seats-input" type="number" />
+          <input
+            className="create__car-seats-input"
+            type="number"
+            name="seats"
+            onChange={(event) => {
+              console.log(event.target.value);
+            }}
+          />
         </div>
         <p className="create__car-type-input-headings">Select Type</p>
         <select
@@ -149,12 +172,10 @@ export default function CreateCarFormPage() {
           <input
             className="create__car-engine-type-input-1"
             type="radio"
-            name="Automatic"
-            value={"automatic"}
-            checked={event.target.value === "automatic"}
+            name="engineType"
+            value={"Automatic"}
             onChange={(event) => {
               console.log(event.target.value);
-              setSelectedCarEngineType(event.target.value);
             }}
           />
           <label className="create__car-engine-type-input-1-heading">
@@ -163,12 +184,10 @@ export default function CreateCarFormPage() {
           <input
             className="create__car-engine-type-input-2"
             type="radio"
-            name="Manual"
-            value={"manual"}
-            checked={event.target.value === "manual"}
+            name="engineType"
+            value={"Manual"}
             onChange={(event) => {
               console.log(event.target.value);
-              setSelectedCarEngineType(event.target.value);
             }}
           />
           <label className="create__car-engine-type-input-2-heading">
@@ -182,6 +201,10 @@ export default function CreateCarFormPage() {
           className="create__car-fuel-tank-capacity-input"
           type="number"
           placeholder="litres"
+          name="fuelTank"
+          onChange={(event) => {
+            console.log(event.target.value);
+          }}
         />
         <label className="create__car-rent-price-input-heading">
           Rent Price
@@ -189,10 +212,17 @@ export default function CreateCarFormPage() {
         <input
           className="create__car-rent-price-input"
           type="number"
+          step={"0.1"}
           placeholder="$"
+          name="carRent"
+          onChange={(event) => {
+            console.log(event.target.value);
+          }}
         />
         <div className="create__car-form-btns">
-          <button className="create__car-form-submit-btn">Submit</button>
+          <button className="create__car-form-submit-btn" type="submit">
+            Submit
+          </button>
           <button className="create__car-form-cancel-btn">Cancel</button>
         </div>
       </form>
