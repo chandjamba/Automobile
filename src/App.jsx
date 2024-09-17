@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import CategoryCarRent from "./Components/CategoryCarRent";
 import Admin from "./Components/Admin";
 import CreateCarFormPage from "./Components/CreateCarFormPage";
+import CarDetailPage from "./Components/CarDetailPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           />
           <Route path="/admin" element={<Admin />} />
           <Route path="/createCarFormPage" element={<CreateCarFormPage />} />
+          <Route path="/carDetailPage" element={<CarDetailPage />} />
         </Routes>
       </main>
       <Footer />

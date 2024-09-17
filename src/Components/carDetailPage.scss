@@ -1,0 +1,121 @@
+.carDetail {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  &__filter-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    background-color: #f7f7f7;
+    padding: 1rem;
+  }
+  &__all-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 1250px;
+    width: 10%;
+    background-color: #f7f7f7;
+  }
+  &__type-filter-box {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 10%;
+    justify-content: space-around;
+  }
+  &__type-filter-heading-box {
+    display: flex;
+    width: 20%;
+    height: 30px;
+  }
+  &__type-filter-heading {
+    color: black;
+    font-size: 10px;
+  }
+  &__check1-box,
+  &__check2-box,
+  &__check3-box,
+  &__check4-box,
+  &__check5-box,
+  &__check6-box {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__type-filter-check1,
+  &__type-filter-check2,
+  &__type-filter-check3,
+  &__type-filter-check4,
+  &__type-filter-check5,
+  &__type-filter-check6 {
+    display: flex;
+  }
+  &__type-filter1,
+  &__type-filter2,
+  &__type-filter3,
+  &__type-filter4,
+  &__type-filter5,
+  &__type-filter6 {
+    color: black;
+    font-size: 12px;
+    align-items: center;
+    width: 40px;
+  }
+  // Car seats capacity filter checkbox styling. //
+  &__seats-filter-box {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 10%;
+    justify-content: space-around;
+    margin: 20px 0 0 0;
+  }
+  &__seats-filter-heading-box {
+    display: flex;
+    width: 20%;
+    height: 30px;
+  }
+  &__seats-filter-heading {
+    color: black;
+    font-size: 10px;
+  }
+  &__seats-check1-box,
+  &__seats-check2-box,
+  &__seats-check3-box,
+  &__seats-check4-box,
+  &__seats-check5-box,
+  &__seats-check6-box {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__seats-filter-check1,
+  &__seats-filter-check2,
+  &__seats-filter-check3,
+  &__seats-filter-check4,
+  &__seats-filter-check5,
+  &__seats-filter-check6 {
+    display: flex;
+  }
+  &__seats-filter1,
+  &__seats-filter2,
+  &__seats-filter3,
+  &__seats-filter4,
+  &__seats-filter5,
+  &__seats-filter6 {
+    color: black;
+    font-size: 12px;
+    width: 40px;
+    align-items: center;
+  }
+}
