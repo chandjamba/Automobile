@@ -5,19 +5,24 @@
   width: 100%;
   background-color: #f1f1f1;
   justify-content: space-between;
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 15%;
+    background-color: #f7f7f7;
+    padding: 2rem;
+  }
   &__filter-sidebar {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 20%;
     background-color: #f7f7f7;
-    padding: 1rem;
   }
   &__all-filter-wrapper {
     display: flex;
     flex-direction: column;
     height: 1250px;
-    width: 10%;
     background-color: #f7f7f7;
   }
   &__type-filter-box {
@@ -117,5 +122,20 @@
     font-size: 12px;
     width: 40px;
     align-items: center;
+  }
+  &__price-slider-box {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 0 0;
+    height: 50px;
+    justify-content: space-around;
+  }
+  &__price-slider-heading {
+    color: black;
+    font-size: 12px;
+  }
+  &__price-slider-input {
+    display: flex;
+
   }
 }

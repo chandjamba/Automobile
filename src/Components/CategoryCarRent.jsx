@@ -86,6 +86,16 @@ export default function CategoryCarRent() {
               <p className="categoryCarRent__seats-filter4">8/More</p>
             </div>
           </div>
+          <div className="categoryCarRent__price-slider-box">
+            <p className="categoryCarRent__price-slider-heading">Price</p>
+            <input
+              className="categoryCarRent__price-slider-input"
+              type="range"
+              min="0"
+              max="500"
+              step="1"
+            />
+          </div>
         </div>
       </div>
 
