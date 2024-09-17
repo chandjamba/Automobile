@@ -1,23 +1,24 @@
 .carDetail {
   display: flex;
-  flex-direction: row;
   height: 100%;
   width: 100%;
-  background-color: #f1f1f1;
   justify-content: space-between;
   &__main-container {
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 15%;
+    width: 100%;
     background-color: #f7f7f7;
-    padding: 2rem;
   }
   &__filter-sidebar {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 15%;
     background-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0 0 0;
   }
   &__all-filter-wrapper {
     display: flex;
@@ -136,6 +137,292 @@
   }
   &__price-slider-input {
     display: flex;
+  }
+  &__car-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    background-color: #002244;
+    align-items: center;
+  }
+  &__car-content-box {
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    width: 70%;
+    margin: 40px 0 0 0;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+  }
+  &__car-content-inner-box {
+    height: 350px;
+    width: 450px;
+  }
+  &__car-image-box {
+    width: 380px;
+    height: 250px;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-color: rgba(182, 178, 178, 0.2);
+    border-radius: 5px;
+    border-width: 1px;
+  }
+  &__image {
+    width: 350px;
+    height: 250px;
+    object-fit: scale-down;
+  }
+  &__car-images-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+    height: 100px;
+    width: 380px;
+    justify-content: space-between;
+  }
+  &__car-image-1,
+  &__car-image-2,
+  &__car-image-3 {
+    display: flex;
+    height: 90px;
+    width: 120px;
+    background-color: rgba(182, 178, 178, 0.2);
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-color: rgba(182, 178, 178, 0.2);
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+  }
+  &__car-description-box {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 500px;
+    background-color: rgba(182, 178, 178, 0.2);
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-color: rgba(182, 178, 178, 0.2);
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+  }
+  &__car-reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 65.5%;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-color: rgba(182, 178, 178, 0.2);
+    border-radius: 5px;
+    border-width: 1px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  &__recommended-cars-heading-container {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 65.5%;
+    align-items: center;
+    margin: 20px;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  &__recommended-cars-heading {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  &__show-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    font-size: 11px;
+    color: #f7f7f7;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color:rgba(182, 178, 178, 0.2) ;
+  }
+  &__show-more-btn:hover {
+    border-color: #f1f1f1;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  &__recommend-cars-cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 65.5%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__car-card1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(182, 178, 178, 0.2);
+    height: 250px;
+    width: 200px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+  }
 
+  &__car-navbar {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 50px;
+    justify-content: space-between;
+  }
+  &__car-model-info-box {
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    width: 50px;
+    justify-content: space-evenly;
+  }
+  &__car-model-box {
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  &__car-type-box {
+    display: flex;
+    align-items: start;
+    height: 20px;
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+  }
+  &__car-like-btn {
+    display: flex;
+    align-items: center;
+    align-items: start;
+  }
+  &__car-card-image-box {
+    display: flex;
+    height: 100px;
+    width: 150px;
+  }
+  &__car-card-image {
+    width: 150px;
+    height: 100px;
+    object-fit: scale-down;
+  }
+
+  // Car specifications bar styling. //
+  &__car-specifications-bar {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 160px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-tank-capacity-box {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 30px;
+    align-items: center;
+  }
+  &__tank-fuel-icon {
+    height: 15px;
+    width: 12px;
+  }
+  &__tank-litres {
+    height: 18px;
+    width: 15px;
+    font-size: 13px;
+  }
+
+  //Gear Icon styling //
+  &__car-gear-shift-box {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 60px;
+    align-items: center;
+  }
+  &__car-gear-icon {
+    height: 15px;
+    width: 15px;
+  }
+  &__gear-type {
+    height: 18px;
+    width: 15px;
+    font-size: 13px;
+  }
+
+  &__car-seats-box {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 60px;
+    align-items: center;
+  }
+  &__car-seats-icon {
+    height: 15px;
+    width: 15px;
+  }
+  &__seats-numbers {
+    height: 18px;
+    width: 25px;
+    font-size: 13px;
+  }
+  &__car-rent-and-btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__car-rent-per-day {
+    display: flex;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  &__car-rent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    font-size: 11px;
+    color: #f7f7f7;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  &__car-rent-btn:hover {
+    border-color: #f7f7f7;
+    background-color: white;
+    color: black;
+    cursor: pointer;
   }
 }
