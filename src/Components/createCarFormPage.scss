@@ -5,17 +5,19 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  background-color: #002244;
   &-form {
     display: flex;
     flex-direction: column;
     height: 550px;
     width: 400px;
-    background-color: lightgrey;
+    background-color: rgba(182, 178, 178, 0.2);
     justify-content: center;
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: grey;
+    border-color: rgba(182, 178, 178, 0.2);
+    color: white;
   }
   &-form-main-heading {
     display: flex;
@@ -37,7 +39,7 @@
   &-model-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-model-input {
     display: flex;
@@ -52,7 +54,7 @@
   &-color-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-color-input {
     display: flex;
@@ -68,7 +70,7 @@
   &-make-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-make-input {
     display: flex;
@@ -83,7 +85,7 @@
   &-seats-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-seats-input {
     display: flex;
@@ -98,7 +100,7 @@
   &-type-input-headings {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
     margin: 10px 0 10px 30px;
   }
   &-type-input {
@@ -125,23 +127,23 @@
   &-engine-type-input-headings {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
     margin-left: 30px;
   }
   &-engine-type-input-1-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-engine-type-input-2-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
   }
   &-fuel-tank-capacity-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
     margin-left: 30px;
   }
   &-fuel-tank-capacity-input {
@@ -158,7 +160,7 @@
   &-rent-price-input-heading {
     font-size: smaller;
     font-weight: 10px;
-    color: black;
+    color: white;
     margin-left: 30px;
   }
   &-rent-price-input {
@@ -190,12 +192,14 @@
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    border-color: grey;
+    border-color: rgba(182, 178, 178, 0.2);
+    background-color: rgba(182, 178, 178, 0.2);
+    color: white;
   }
   &-form-submit-btn:hover {
-    background-color: #007fff;
-    color: white;
-    border-color: #007fff;
+    background-color: white;
+    border-color: white;
+    color: black;
   }
   &-form-cancel-btn {
     display: flex;
@@ -207,11 +211,13 @@
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    border-color: grey;
+    border-color: rgba(182, 178, 178, 0.2);
+    background-color: rgba(182, 178, 178, 0.2);
+    color: white;
   }
   &-form-cancel-btn:hover {
-    background-color: #ff0800;
-    color: white;
-    border-color: #ff0800;
+    background-color: white;
+    border-color: white;
+    color: black;
   }
 }
