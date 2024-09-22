@@ -121,7 +121,9 @@ export default function CarDetailPage() {
             </div>
           </div>
           <div className="carDetail__car-reviews-wrapper">
-            <h1> Customer Reviews Box</h1>
+            <div className="carDetail__car-reviews">
+              <h1> Customer Reviews Box</h1>
+            </div>
           </div>
           <div className="carDetail__recommended-cars-heading-container">
             <h1 className="carDetail__recommended-cars-heading">
