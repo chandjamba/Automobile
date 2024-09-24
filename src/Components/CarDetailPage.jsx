@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./carDetailPage.scss";
+import { Avatar, Rating } from "@mui/material";
 
 export default function CarDetailPage() {
+  const [starValue, setStarValue] = useState();
   return (
     <div className="carDetail">
       <div className="carDetail__main-container">
@@ -105,9 +108,16 @@ export default function CarDetailPage() {
           <div className="carDetail__car-content-box">
             <div className="carDetail__car-content-inner-box">
               <div className="carDetail__car-image-box">
+                <div className="carDetail__car-image-box-heading-1">
+                  Sports car with the best design and acceleration
+                </div>
+                <div className="carDetail__car-image-box-heading-2">
+                  Safety and comfort while driving a futuristic and elegant
+                  sports car
+                </div>
                 <img
                   className="carDetail__image"
-                  src="https://inventory-assets.motocommerce.ca/build_and_price/volkswagen/779684624/6l6l"
+                  src="https://inventory-assets.motocommerce.ca/build_and_price/volkswagen/779684524/2t2t"
                 />
               </div>
               <div className="carDetail__car-images-container">
@@ -117,13 +127,191 @@ export default function CarDetailPage() {
               </div>
             </div>
             <div className="carDetail__car-description-box">
-              <p>This is description box</p>
+              <div className="carDetail__car-name-like-wrapper">
+                <div className="carDetail__car-name-box">Toyota RAV-4</div>
+                <div className="carDetail__car-like-box">❤️</div>
+              </div>
+              <div className="carDetail__car-rating-reviewer-wrapper">
+                <div className="carDetail__car-rating-box">
+                  <Rating
+                    name="simple-controlled"
+                    value={starValue}
+                    size="small"
+                    onChange={(newValue) => {
+                      setStarValue(newValue);
+                    }}
+                  />
+                </div>
+                <div className="carDetail__car-reviewer-box">440+ Reviewer</div>
+              </div>
+              <div className="carDetail__car-detail-box-1">
+                NISMO has become the embodiment of Nissan outstanding
+                performance, inspired by the most unforgiving proving ground,
+                the race track.
+              </div>
+              <div className="carDetail__car-detail-box-2">
+                <div className="carDetail__car-Type-box">
+                  <p className="carDetail__car-Type-heading">Type Car</p>
+                  <p className="carDetail__car-Type">SUV</p>
+                </div>
+                <div className="carDetail__car-capacity-box">
+                  <p className="carDetail__car-capacity-heading">Capacity</p>
+                  <p className="carDetail__car-capacity">2 Person</p>
+                </div>
+                <div className="carDetail__car-steering-box">
+                  <p className="carDetail__car-steering-heading">Steering</p>
+                  <p className="carDetail__car-steering">Manual</p>
+                </div>
+                <div className="carDetail__car-gasoline-box">
+                  <p className="carDetail__car-gasoline-heading">Gasoline</p>
+                  <p className="carDetail__car-gasoline">70L</p>
+                </div>
+              </div>
+              <div className="carDetail__prices-or-rent-btn-wrapper">
+                <div className="carDetail__car-prices-box">
+                  <div className="carDetail__car-new-price">$80.00/ days</div>
+                  <div className="carDetail__car-old-price">$100.00</div>
+                </div>
+                <div className="carDetail__car-rent-btn">Rent Now</div>
+              </div>
             </div>
           </div>
-          <div className="carDetail__car-reviews-wrapper">
-            <div className="carDetail__car-reviews">
-              <h1> Customer Reviews Box</h1>
+          <div className="carDetail__car-customer-reviews-wrapper">
+            <div className="carDetail__car-customer-reviews-and-number-box">
+              <h1 className="carDetail__car-customer-reviews-heading">
+                Reviews
+              </h1>
+              <div className="carDetail__car-customer-reviews-number">14</div>
             </div>
+            <div className="carDetail__car-review-customer-card-1">
+              <div className="carDetail__car-review-customer-details-box">
+                <div className="carDetail__car-review-customer-avatar-and-name">
+                  <Avatar
+                    alt="C"
+                    src="/static/images/avatar/1.JPEG"
+                    sx={{
+                      width: 35,
+                      height: 35,
+                      backgroundColor: "rgba(182, 178, 178, 0.2)",
+                    }}
+                  />
+                  <div className="carDetail__car-review-customer-name-and-profession-box">
+                    <div className="carDetail__car-review-customer-name">
+                      Chand Jamba
+                    </div>
+                    <div className="carDetail__car-review-customer-profession">
+                      CEO at Amazon
+                    </div>
+                  </div>
+                </div>
+                <div className="carDetail__car-review-date-and-rating">
+                  <div className="carDetail__car-review-date">21 July 2022</div>
+                  <Rating
+                    name="simple-controlled"
+                    value={starValue}
+                    size="small"
+                    onChange={(newValue) => {
+                      setStarValue(newValue);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="carDetail__car-review-box">
+                <p className="carDetail__car-review">
+                  We are very happy with the service from the MORENT App. Morent
+                  has a low price and also a large variety of cars with good and
+                  comfortable facilities. In addition, the service provided by
+                  the officers is also very friendly and very polite.
+                </p>
+              </div>
+            </div>
+            <div className="carDetail__car-review-customer-card-1">
+              <div className="carDetail__car-review-customer-details-box">
+                <div className="carDetail__car-review-customer-avatar-and-name">
+                  <Avatar
+                    alt="C"
+                    src="/static/images/avatar/1.JPEG"
+                    sx={{
+                      width: 35,
+                      height: 35,
+                      backgroundColor: "rgba(182, 178, 178, 0.2)",
+                    }}
+                  />
+                  <div className="carDetail__car-review-customer-name-and-profession-box">
+                    <div className="carDetail__car-review-customer-name">
+                      Chand Jamba
+                    </div>
+                    <div className="carDetail__car-review-customer-profession">
+                      CEO at Amazon
+                    </div>
+                  </div>
+                </div>
+                <div className="carDetail__car-review-date-and-rating">
+                  <div className="carDetail__car-review-date">21 July 2022</div>
+                  <Rating
+                    name="simple-controlled"
+                    value={starValue}
+                    size="small"
+                    onChange={(newValue) => {
+                      setStarValue(newValue);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="carDetail__car-review-box">
+                <p className="carDetail__car-review">
+                  We are very happy with the service from the MORENT App. Morent
+                  has a low price and also a large variety of cars with good and
+                  comfortable facilities. In addition, the service provided by
+                  the officers is also very friendly and very polite.
+                </p>
+              </div>
+            </div>
+            <div className="carDetail__car-review-customer-card-1">
+              <div className="carDetail__car-review-customer-details-box">
+                <div className="carDetail__car-review-customer-avatar-and-name">
+                  <Avatar
+                    alt="C"
+                    src="/static/images/avatar/1.JPEG"
+                    sx={{
+                      width: 35,
+                      height: 35,
+                      backgroundColor: "rgba(182, 178, 178, 0.2)",
+                    }}
+                  />
+                  <div className="carDetail__car-review-customer-name-and-profession-box">
+                    <div className="carDetail__car-review-customer-name">
+                      Chand Jamba
+                    </div>
+                    <div className="carDetail__car-review-customer-profession">
+                      CEO at Amazon
+                    </div>
+                  </div>
+                </div>
+                <div className="carDetail__car-review-date-and-rating">
+                  <div className="carDetail__car-review-date">21 July 2022</div>
+                  <Rating
+                    name="simple-controlled"
+                    value={starValue}
+                    size="small"
+                    onChange={(newValue) => {
+                      setStarValue(newValue);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="carDetail__car-review-box">
+                <p className="carDetail__car-review">
+                  We are very happy with the service from the MORENT App. Morent
+                  has a low price and also a large variety of cars with good and
+                  comfortable facilities. In addition, the service provided by
+                  the officers is also very friendly and very polite.
+                </p>
+              </div>
+            </div>
+            <button className="carDetail__car-review-more-btn">
+              Show More
+            </button>
           </div>
           <div className="carDetail__recommended-cars-heading-container">
             <h1 className="carDetail__recommended-cars-heading">

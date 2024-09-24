@@ -18,12 +18,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
-            path="/Homepage/CategoryCarRent"
+            path="/homepage/CategoryCarRent"
             element={<CategoryCarRent />}
           />
           <Route path="/admin" element={<Admin />} />
           <Route path="/createCarFormPage" element={<CreateCarFormPage />} />
-          <Route path="/carDetailPage" element={<CarDetailPage />} />
+          <Route
+            path="/homepage/carDetailPage/:carId"
+            element={<CarDetailPage />}
+          />
         </Routes>
       </main>
       <Footer />

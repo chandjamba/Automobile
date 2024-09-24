@@ -344,12 +344,29 @@
     font-weight: bold;
   }
   &__car_cards-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 82%;
-    height: 100%;
-    justify-content: space-around;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // width: 82%;
+    // height: 100%;
+    // justify-content: space-around;
+  }
+  @media (min-width: 600px) {
+    &__car_cards-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 800px) {
+    &__car_cards-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1100px) {
+    &__car_cards-wrapper {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   &__inventory-car-card1 {
     display: flex;
@@ -366,6 +383,8 @@
     align-items: center;
     transition: transform 0.4s;
     padding: 1rem;
+    text-decoration: none;
+    color: black;
   }
   &__inventory-car-card1:hover {
     transform: scale(0.9);
@@ -389,6 +408,7 @@
     display: flex;
     align-items: center;
     height: 20px;
+    width: 80px;
   }
   &__car-type-box {
     display: flex;
@@ -413,10 +433,6 @@
     width: 200px;
     height: 100px;
     object-fit: scale-down;
-    opacity: 80%;
-  }
-  &__car-image:hover {
-    opacity: 100%;
   }
 
   // Car specifications bar styling. //
@@ -441,7 +457,9 @@
   }
   &__tank-litres {
     height: 18px;
-    width: 15px;
+    width: 25px;
+    font-size: 12px;
+    align-items: center;
   }
 
   //Gear Icon styling //
@@ -453,12 +471,14 @@
     align-items: center;
   }
   &__car-gear-icon {
-    height: 18px;
+    height: 15px;
     width: 15px;
   }
   &__gear-type {
     height: 18px;
-    width: 15px;
+    width: 45px;
+    font-size: 12px;
+    align-items: center;
   }
 
   &__car-seats-box {
@@ -475,6 +495,7 @@
   &__seats-numbers {
     height: 18px;
     width: 25px;
+    font-size: 12px;
   }
   &__car-rent-and-btn-container {
     display: flex;
@@ -503,6 +524,7 @@
     border-radius: 5px;
     border-width: 1px;
     border-color: #1f62ff;
+    text-decoration: none;
   }
   &__car-rent-btn:hover {
     border-color: #f7f7f7;

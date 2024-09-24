@@ -7,7 +7,6 @@ export default function CreateCarFormPage() {
   const [carMakes, setCarMakes] = useState();
   const [selectedCarColor, setSelectedCarColor] = useState();
   const [carTypes, setCarTypes] = useState();
-  const [selectedCarType, setSelectedCarType] = useState();
 
   const submitButtonHandler = async (event) => {
     event.preventDefault();
@@ -31,7 +30,6 @@ export default function CreateCarFormPage() {
     } catch (error) {
       console.log(error);
     }
-
   };
 
   useEffect(() => {
@@ -114,26 +112,6 @@ export default function CreateCarFormPage() {
     getMakes();
   }, []);
 
-  useEffect(() => {
-    function postFormData() {
-      try {
-        databases
-          .listDocuments(
-            import.meta.env.VITE_APPWRITE_DATABASE_ID,
-            import.meta.env.VITE_APPWRITE_CAR_MAKE_COLLECTION_ID,
-            []
-          )
-          .then((resp) => {
-            setCarMakes(resp.documents);
-            console.log(resp.documents);
-          });
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    postFormData();
-  }, []);
-
   return (
     <div className="create__car">
       <form className="create__car-form" onSubmit={submitButtonHandler}>
@@ -142,20 +120,18 @@ export default function CreateCarFormPage() {
         </div>
         <div className="create__car-appearance-box">
           <p className="create__car-model-input-heading">Model</p>
-          <select
-            className="create__car-model-input"
-            name="carModel"
-          >
+          <select className="create__car-model-input" name="carModel">
             {carModels?.map((carModel) => {
-              return <option key={carModel?.$id} value={carModel?.$id}>{carModel?.modelName}</option>;
+              return (
+                <option key={carModel?.$id} value={carModel?.$id}>
+                  {carModel?.modelName}
+                </option>
+              );
             })}
           </select>
           <p className="create__car-make-input-heading">Make</p>
 
-          <select
-            className="create__car-make-input"
-            name="carMake"
-          >
+          <select className="create__car-make-input" name="carMake">
             {carMakes?.map((carMake) => {
               return (
                 <option key={carMake.$id} value={carMake.$id}>
@@ -189,10 +165,7 @@ export default function CreateCarFormPage() {
           />
         </div>
         <p className="create__car-type-input-headings">Select Type</p>
-        <select
-          className="create__car-type-input"
-          name="carType"
-        >
+        <select className="create__car-type-input" name="carType">
           {carTypes?.map((carType) => {
             return (
               <option key={carType.$id} value={carType.$id}>

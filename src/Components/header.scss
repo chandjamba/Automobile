@@ -51,8 +51,21 @@
     align-items: center;
     justify-content: space-around;
     height: 50px;
-    width: 120px;
+    width: 150px;
     margin-right: 5px;
+  }
+  &__form-icon-container {
+    display: flex;
+    border: solid;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    background-color: white;
+  }
+  &__form-icon-container:hover {
+    border-color: black;
   }
   &__notification-icon-container {
     display: flex;
@@ -95,6 +108,9 @@
     border-width: 1px;
     border-color: #f7f7f7;
     background-color: white;
+    align-items: center;
+    justify-content: center;
+    color: white;
   }
   &__profile-icon-container:hover {
     border-color: black;
