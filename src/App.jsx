@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/createCarFormPage" element={<CreateCarFormPage />} />
           <Route
-            path="/homepage/carDetailPage/:carId"
+            path="/homepage/CarDetailPage/:carId"
             element={<CarDetailPage />}
           />
         </Routes>

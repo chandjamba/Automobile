@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { databases } from "../lib/appwrite";
 
 export default function Homepage() {
-  const { modelId } = useParams();
+  const { carId } = useParams();
   const [cars, setCars] = useState();
 
   useEffect(() => {
     function getAllCars() {
       try {
         databases
-          .listDocuments(
+          .getDocument(
             import.meta.env.VITE_APPWRITE_DATABASE_ID,
             import.meta.env.VITE_APPWRITE_ALL_CARS_COLLECTION_ID,
             []
@@ -167,13 +167,19 @@ export default function Homepage() {
       <div className="homepage__car_cards-wrapper">
         {cars?.map((car) => {
           return (
-            <div key={car?.carId} className="homepage__inventory-car-card1">
+            <Link
+              to={`./homepage/carDetailPage/${carId}`}
+              key={car?.carId}
+              className="homepage__inventory-car-card1"
+            >
               <div className="homepage__car-navbar">
                 <div className="homepage__car-model-info-box">
                   <div className="homepage__car-model-box">
                     {car?.carModels?.modelName}
                   </div>
-                  <div className="homepage__car-type-box">{car?.carTypes?.typeName}</div>
+                  <div className="homepage__car-type-box">
+                    {car?.carTypes?.typeName}
+                  </div>
                 </div>
                 <div className="homepage__car-like-btn">❤️</div>
               </div>
@@ -269,7 +275,7 @@ export default function Homepage() {
                   Rent Now
                 </Link>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
