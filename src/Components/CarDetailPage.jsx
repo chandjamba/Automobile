@@ -3,33 +3,42 @@ import "./carDetailPage.scss";
 import { Avatar, Rating } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { databases } from "../lib/appwrite";
+import { Query } from "appwrite";
 
 export default function CarDetailPage() {
-  const { carId } = useParams();
-
   const [starValue, setStarValue] = useState();
   const [carDetail, setCarDetail] = useState();
   const [allCars, setAllCars] = useState();
-
+  const { carId } = useParams();
   useEffect(() => {
-    function getAllCarsCollection() {
+    async function getAllCarsCollection() {
       try {
-        databases
+        await databases
           .getDocument(
             import.meta.env.VITE_APPWRITE_DATABASE_ID,
             import.meta.env.VITE_APPWRITE_ALL_CARS_COLLECTION_ID,
-            []
+            carId
           )
           .then((resp) => {
-            setAllCars(resp.document);
-            console.log(resp.document);
+            setCarDetail(resp);
+            console.log(resp, "one car");
+          });
+        await databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_ALL_CARS_COLLECTION_ID,
+            [Query.notEqual("$id", [carId])]
+          )
+          .then((resp) => {
+            setCarDetail(resp);
+            console.log(resp, "all cars");
           });
       } catch (error) {
         console.log(error);
       }
     }
     getAllCarsCollection();
-  }, []);
+  }, [carId]);
 
   return (
     <div className="carDetail">

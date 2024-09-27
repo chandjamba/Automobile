@@ -1,10 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./homepage.scss";
 import { useEffect, useState } from "react";
 import { databases } from "../lib/appwrite";
 
 export default function Homepage() {
-  const { carId } = useParams();
   const [cars, setCars] = useState();
 
   useEffect(() => {
@@ -168,8 +167,8 @@ export default function Homepage() {
         {cars?.map((car) => {
           return (
             <Link
-              to={`./homepage/carDetailPage/${carId}`}
-              key={car?.carId}
+              to={`./homepage/carDetailPage/${car.$id}`}
+              key={car.$id}
               className="homepage__inventory-car-card1"
             >
               <div className="homepage__car-navbar">
