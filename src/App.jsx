@@ -9,6 +9,7 @@ import CategoryCarRent from "./Components/CategoryCarRent";
 import Admin from "./Components/Admin";
 import CreateCarFormPage from "./Components/CreateCarFormPage";
 import CarDetailPage from "./Components/CarDetailPage";
+import CarPaymentPage from "./Components/CarPaymentPage";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
             path="/homepage/CarDetailPage/:carId"
             element={<CarDetailPage />}
           />
+          <Route path="/homepage/CarDetailPage/:carId/carPaymentPage" element={<CarPaymentPage />} />
         </Routes>
       </main>
       <Footer />

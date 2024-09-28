@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./carDetailPage.scss";
 import { Avatar, Rating } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { databases } from "../lib/appwrite";
 import { Query } from "appwrite";
 
@@ -11,7 +11,7 @@ export default function CarDetailPage() {
   const [allCars, setAllCars] = useState();
   const { carId } = useParams();
   useEffect(() => {
-    async function getAllCarsCollection() {
+    async function getCarData() {
       try {
         await databases
           .getDocument(
@@ -23,6 +23,16 @@ export default function CarDetailPage() {
             setCarDetail(resp);
             console.log(resp, "one car");
           });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getCarData();
+  }, [carId]);
+
+  useEffect(() => {
+    async function getAllCarsCollection() {
+      try {
         await databases
           .listDocuments(
             import.meta.env.VITE_APPWRITE_DATABASE_ID,
@@ -30,8 +40,8 @@ export default function CarDetailPage() {
             [Query.notEqual("$id", [carId])]
           )
           .then((resp) => {
-            setCarDetail(resp);
-            console.log(resp, "all cars");
+            setAllCars(resp.documents);
+            console.log(resp.documents, "all cars");
           });
       } catch (error) {
         console.log(error);
@@ -165,7 +175,8 @@ export default function CarDetailPage() {
             <div className="carDetail__car-description-box">
               <div className="carDetail__car-name-like-wrapper">
                 <div className="carDetail__car-name-box">
-                  {allCars?.carModels?.modelName}
+                  {carDetail?.carMake?.makeCompanyName}
+                  {console.log(carDetail?.carMake?.makeCompanyName)}
                 </div>
                 <div className="carDetail__car-like-box">❤️</div>
               </div>
@@ -190,27 +201,42 @@ export default function CarDetailPage() {
               <div className="carDetail__car-detail-box-2">
                 <div className="carDetail__car-Type-box">
                   <p className="carDetail__car-Type-heading">Type Car</p>
-                  <p className="carDetail__car-Type">SUV</p>
+                  <p className="carDetail__car-Type">
+                    {carDetail?.carTypes?.typeName}
+                  </p>
                 </div>
                 <div className="carDetail__car-capacity-box">
                   <p className="carDetail__car-capacity-heading">Capacity</p>
-                  <p className="carDetail__car-capacity">2 Person</p>
+                  <p className="carDetail__car-capacity">
+                    {carDetail?.carSeats}/Person
+                  </p>
                 </div>
                 <div className="carDetail__car-steering-box">
                   <p className="carDetail__car-steering-heading">Steering</p>
-                  <p className="carDetail__car-steering">Manual</p>
+                  <p className="carDetail__car-steering">
+                    {carDetail?.carEngineType}
+                  </p>
                 </div>
                 <div className="carDetail__car-gasoline-box">
                   <p className="carDetail__car-gasoline-heading">Gasoline</p>
-                  <p className="carDetail__car-gasoline">70L</p>
+                  <p className="carDetail__car-gasoline">
+                    {carDetail?.carFuelTankCapacity}L
+                  </p>
                 </div>
               </div>
               <div className="carDetail__prices-or-rent-btn-wrapper">
                 <div className="carDetail__car-prices-box">
-                  <div className="carDetail__car-new-price">$80.00/ days</div>
-                  <div className="carDetail__car-old-price">$100.00</div>
+                  <div className="carDetail__car-new-price">
+                    ${carDetail?.carRentPrice}/ day
+                  </div>
+                  <div className="carDetail__car-old-price">$600.00</div>
                 </div>
-                <div className="carDetail__car-rent-btn">Rent Now</div>
+                <Link
+                  to={"/homepage/CarDetailPage/:carId/carPaymentPage"}
+                  className="carDetail__car-rent-btn"
+                >
+                  Rent Now
+                </Link>
               </div>
             </div>
           </div>
