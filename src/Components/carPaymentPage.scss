@@ -69,6 +69,7 @@
     justify-content: space-between;
     align-items: center;
     height: 120px;
+    width: 100%;
   }
   &__billing-name-input-box,
   &__billing-phone-input-box,
@@ -77,7 +78,7 @@
     display: flex;
     flex-direction: column;
     height: 50px;
-    width: 180px;
+    width: 200px;
     justify-content: space-around;
   }
   &__billing-name-input-heading,
@@ -120,6 +121,7 @@
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(182, 178, 178, 0.2);
+    margin-top: 40px;
   }
   &__rental-info-heading-box {
     display: flex;
@@ -160,7 +162,6 @@
     display: flex;
     flex-direction: row;
     height: 250px;
-    background-color: red;
     justify-content: space-between;
   }
   &__rental-pick-up-info-inputs-box {
@@ -181,5 +182,199 @@
   }
   &__rental-pick-up-radio-btn-heading {
     font-size: 12px;
+  }
+  &__rental-pick-up-location-input-box,
+  &__rental-pick-up-date-input-box,
+  &__rental-pick-up-time-input-box {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    justify-content: space-around;
+  }
+  &__rental-pick-up-location-input-heading,
+  &__rental-pick-up-date-input-heading,
+  &__rental-pick-up-time-input-heading {
+    font-size: 12px;
+    color: white;
+  }
+  &__rental-pick-up-location-input,
+  &__rental-pick-up-date-input,
+  &__rental-pick-up-time-input {
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+  &__rental-pick-up-location-input:hover,
+  &__rental-pick-up-date-input:hover,
+  &__rental-pick-up-time-input:hover {
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  // drop off section **** drop off section **** drop off section **** drop off section **** //
+  &__rental-drop-of-info-inputs-box {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+    justify-content: space-around;
+  }
+  &__rental-drop-of-radio-btn-box {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    justify-content: space-around;
+  }
+  &__rental-drop-of-radio-btn {
+    color: black;
+  }
+  &__rental-drop-of-radio-btn-heading {
+    font-size: 12px;
+  }
+  &__rental-drop-of-location-input-box,
+  &__rental-drop-of-date-input-box,
+  &__rental-drop-of-time-input-box {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    justify-content: space-around;
+  }
+  &__rental-drop-of-location-input-heading,
+  &__rental-drop-of-date-input-heading,
+  &__rental-drop-of-time-input-heading {
+    font-size: 12px;
+    color: white;
+  }
+  &__rental-drop-of-location-input,
+  &__rental-drop-of-date-input,
+  &__rental-drop-of-time-input {
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+  &__rental-drop-of-location-input:hover,
+  &__rental-drop-of-date-input:hover,
+  &__rental-drop-of-time-input:hover {
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+
+  // Payment Method Section Styling *****  Payment Method Section Styling *****  Payment Method Section Styling ***** //
+
+  &__payment-info-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(182, 178, 178, 0.2);
+    color: white;
+    padding: 1rem;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+    margin-top: 40px;
+  }
+  &__payment-info-heading-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    color: white;
+  }
+  &__payment-info-heading-1-box {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 100%;
+    align-items: center;
+  }
+  &__payment-info-heading-1 {
+    font-size: 12px;
+    width: 120px;
+  }
+  &__payment-info-heading-2-inner-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__payment-info-heading-2 {
+    font-size: 10px;
+    width: 200px;
+  }
+  &__payment-info-heading-3 {
+    font-size: 10px;
+    width: 100px;
+    text-align: right;
+  }
+  &__payment-pick-up-radio-btn-box {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    justify-content: space-around;
+  }
+  &__payment-pick-up-radio-btn {
+    color: black;
+  }
+  &__payment-pick-up-radio-btn-heading {
+    font-size: 12px;
+  }
+  // payment inputs ******  payment inputs *****  payment inputs *****  payment inputs *****  payment inputs *****  payment inputs //
+  &__payment-inputs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+  }
+  &__payment-cardNumber-input-box,
+  &__payment-expiry-input-box,
+  &__payment-cardHolder-input-box,
+  &__payment-cvc-input-box {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    justify-content: space-around;
+  }
+  &__payment-cardNumber-input-heading,
+  &__payment-expiry-input-heading,
+  &__payment-cardHolder-input-heading,
+  &__payment-cvc-input-heading {
+    font-size: 12px;
+    color: white;
+  }
+  &__payment-cardNumber-input,
+  &__payment-expiry-input,
+  &__payment-cardHolder-input,
+  &__payment-cvc-input {
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+  &__payment-cardNumber-input:hover,
+  &__payment-expiry-input:hover,
+  &__payment-cardHolder-input:hover,
+  &__payment-cvc-input:hover {
+    border-color: rgba(182, 178, 178, 0.2);
   }
 }

@@ -127,7 +127,7 @@ export default function CarPaymentPage() {
                   name="drop-of"
                 />
                 <p className="carPayment__rental-drop-of-radio-btn-heading">
-                  Drop-of
+                  Drop-off
                 </p>
               </div>
               <div className="carPayment__rental-drop-of-location-input-box">
@@ -146,7 +146,7 @@ export default function CarPaymentPage() {
 
               <div className="carPayment__rental-drop-of-date-input-box">
                 <p className="carPayment__rental-drop-of-date-input-heading">
-                  Locations
+                  Date
                 </p>
                 <input
                   className="carPayment__rental-drop-of-date-input"
@@ -155,16 +155,82 @@ export default function CarPaymentPage() {
                 />
               </div>
 
-              <div className="carPayment__rental-drop-of-address-input-box">
-                <p className="carPayment__rental-drop-of-address-input-heading">
-                  Locations
+              <div className="carPayment__rental-drop-of-time-input-box">
+                <p className="carPayment__rental-drop-of-time-input-heading">
+                  Time
                 </p>
                 <input
-                  className="carPayment__rental-drop-of-address-input"
+                  className="carPayment__rental-drop-of-time-input"
                   type="time"
                   placeholder=" Select your time"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="carPayment__payment-info-box">
+          <div className="carPayment__payment-info-heading-box">
+            <div className="carPayment__payment-info-heading-1-box">
+              <p className="carPayment__payment-info-heading-1">
+                Payment Method
+              </p>
+            </div>
+            <div className="carPayment__payment-info-heading-2-inner-box">
+              <p className="carPayment__payment-info-heading-2">
+                Please enter your payment method
+              </p>
+              <p className="carPayment__payment-info-heading-3">Step 3 of 4</p>
+            </div>
+            <div className="carPayment__payment-pick-up-radio-btn-box">
+              <input
+                className="carPayment__payment-pick-up-radio-btn"
+                type="radio"
+                name="pickup"
+              />
+              <p className="carPayment__payment-pick-up-radio-btn-heading">
+                Pick-up
+              </p>
+            </div>
+          </div>
+
+          <div className="carPayment__payment-inputs-wrapper">
+            <div className="carPayment__payment-cardNumber-input-box">
+              <p className="carPayment__payment-cardNumber-input-heading">
+                Card Number
+              </p>
+              <input
+                className="carPayment__payment-cardNumber-input"
+                type="text"
+                placeholder="Card number"
+              />
+            </div>
+            <div className="carPayment__payment-expiry-input-box">
+              <p className="carPayment__payment-expiry-input-heading">
+                Expiry Date
+              </p>
+              <input
+                className="carPayment__payment-expiry-input"
+                type="tel"
+                placeholder="DD / MM / YY"
+              />
+            </div>
+            <div className="carPayment__payment-cardHolder-input-box">
+              <p className="carPayment__payment-cardHolder-input-heading">
+                Card Holder
+              </p>
+              <input
+                className="carPayment__payment-cardHolder-input"
+                type="text"
+                placeholder="Card holder"
+              />
+            </div>
+            <div className="carPayment__payment-cvc-input-box">
+              <p className="carPayment__payment-cvc-input-heading">CVC</p>
+              <input
+                className="carPayment__payment-cvc-input"
+                type="text"
+                placeholder="CVC"
+              />
             </div>
           </div>
         </div>
