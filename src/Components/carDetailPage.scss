@@ -399,6 +399,40 @@
     background-color: white;
     color: black;
   }
+  &__car-customer-add-review-input-and-btn-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  &__car-customer-add-review-input-box {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  &__car-customer-add-review-input {
+    width: 90%;
+    height: 50px;
+    padding: 1rem;
+    outline: none;
+  }
+  &__car-customer-add-review-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    font-size: 11px;
+    color: #f7f7f7;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  &__car-customer-add-review-submit-btn:hover {
+    border-color: white;
+  }
   &__car-review-customer-card-1 {
     display: flex;
     flex-direction: column;

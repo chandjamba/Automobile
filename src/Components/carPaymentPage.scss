@@ -8,7 +8,7 @@
   &__input-side-wrapper {
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 1400px;
     width: 50%;
     margin: 80px 0 80px 0;
     color: white;
@@ -16,7 +16,7 @@
   &__billing-info-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
     height: 250px;
     background-color: rgba(182, 178, 178, 0.2);
     color: white;
@@ -111,7 +111,7 @@
   &__rental-info-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
     height: 400px;
     background-color: rgba(182, 178, 178, 0.2);
     color: white;
@@ -273,17 +273,17 @@
   &__payment-info-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 250px;
+    width: 85%;
+    height: 350px;
     background-color: rgba(182, 178, 178, 0.2);
     color: white;
     padding: 1rem;
-    justify-content: space-around;
     border: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(182, 178, 178, 0.2);
     margin-top: 40px;
+    justify-content: space-between;
   }
   &__payment-info-heading-box {
     display: flex;
@@ -320,18 +320,122 @@
     width: 100px;
     text-align: right;
   }
-  &__payment-pick-up-radio-btn-box {
+  &__payment-info-inner-wrapper {
     display: flex;
     flex-direction: row;
-    width: 80px;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 150px;
   }
-  &__payment-pick-up-radio-btn {
+  // method #1 //
+  &__payment-creditCard-radio-btn-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__payment-creditCard-radio-heading-wrapper {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__payment-creditCard-radio-btn {
     color: black;
   }
-  &__payment-pick-up-radio-btn-heading {
+  &__payment-creditCard-radio-btn-heading {
     font-size: 12px;
   }
+  &__payment-creditCard-logo-box {
+    display: flex;
+    background-color: white;
+    height: 20px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+  }
+  .visa {
+    display: flex;
+  }
+  //method #2 //
+  &__payment-paypal-radio-btn-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__payment-paypal-radio-heading-wrapper {
+    display: flex;
+    width: 55px;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__payment-paypal-radio-btn {
+    color: black;
+  }
+  &__payment-paypal-radio-btn-heading {
+    font-size: 12px;
+  }
+  &__payment-paypal-logo-box {
+    display: flex;
+    background-color: white;
+    height: 20px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+  }
+  .paypal {
+    display: flex;
+  }
+
+  // method #3 //
+  &__payment-bitcoin-radio-btn-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__payment-bitcoin-radio-heading-wrapper {
+    display: flex;
+    width: 55px;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__payment-bitcoin-radio-btn {
+    color: black;
+  }
+  &__payment-bitcoin-radio-btn-heading {
+    font-size: 12px;
+  }
+  &__payment-bitcoin-logo-box {
+    display: flex;
+    background-color: white;
+    height: 20px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+  }
+  .bitcoin {
+    display: flex;
+  }
+
   // payment inputs ******  payment inputs *****  payment inputs *****  payment inputs *****  payment inputs *****  payment inputs //
   &__payment-inputs-wrapper {
     display: flex;
@@ -376,5 +480,107 @@
   &__payment-cardHolder-input:hover,
   &__payment-cvc-input:hover {
     border-color: rgba(182, 178, 178, 0.2);
+  }
+  // confirmation section //
+
+  &__confirmation-info-box {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 250px;
+    background-color: rgba(182, 178, 178, 0.2);
+    color: white;
+    padding: 1rem;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+    margin-top: 40px;
+  }
+  &__confirmation-info-heading-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    color: white;
+  }
+  &__confirmation-info-heading-1-box {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    width: 100%;
+    align-items: center;
+  }
+  &__confirmation-info-heading-1 {
+    font-size: 12px;
+    width: 120px;
+  }
+  &__confirmation-info-heading-2-inner-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__confirmation-info-heading-2 {
+    font-size: 10px;
+    width: 300px;
+  }
+  &__confirmation-info-heading-3 {
+    font-size: 10px;
+    width: 100px;
+    text-align: right;
+  }
+  &__confirmation-checkbox1-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+  }
+  &__confirmation-checkbox1-btn {
+    display: flex;
+  }
+  &__confirmation-checkbox1-para {
+    font-size: 10px;
+  }
+  // checkbox-2 //
+  &__confirmation-checkbox2-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+  }
+  &__confirmation-checkbox2-btn {
+    display: flex;
+  }
+  &__confirmation-checkbox2-para {
+    font-size: 10px;
+  }
+  // rent now submit box //
+  &__confirmation-rentNow-submit-btn-box {
+    display: flex;
+    height: 30px;
+    width: 50%;
+    align-items: center;
+  }
+  &__confirmation-rentNow-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    font-size: 11px;
+    color: #f7f7f7;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+    text-decoration: none;
+  }
+  &__confirmation-rentNow-submit-btn:hover {
+    border-color: white;
   }
 }

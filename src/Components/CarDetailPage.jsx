@@ -3,7 +3,7 @@ import "./carDetailPage.scss";
 import { Avatar, Rating } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import { databases } from "../lib/appwrite";
-import { Query } from "appwrite";
+import { ID, Query } from "appwrite";
 
 export default function CarDetailPage() {
   const [starValue, setStarValue] = useState();
@@ -50,6 +50,25 @@ export default function CarDetailPage() {
     getAllCarsCollection();
   }, [carId]);
 
+  const reviewSubmitButtonHandler = async (event) => {
+    event.preventDefault();
+    try {
+      await databases.createDocument(
+        import.meta.env.VITE_APPWRITE_DATABASE_ID,
+        import.meta.env.VITE_APPWRITE_REVIEWS_COLLECTION_ID,
+        ID.unique(),
+        {
+          reviewId: ID.unique(),
+          carId: carId,
+          reviewText: event.target.reviewText.value,
+          createdAt: new Date().toISOString(),
+          reviewRating: 1.2,
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="carDetail">
       <div className="carDetail__main-container">
@@ -247,6 +266,23 @@ export default function CarDetailPage() {
               </h1>
               <div className="carDetail__car-customer-reviews-number">14</div>
             </div>
+            <form
+              className="create__review-form"
+              onSubmit={reviewSubmitButtonHandler}
+            >
+              <div className="carDetail__car-customer-add-review-input-and-btn-wrapper">
+                <div className="carDetail__car-customer-add-review-input-box">
+                  <textarea
+                    className="carDetail__car-customer-add-review-input"
+                    placeholder="   Add your review here"
+                    name="reviewText"
+                  />
+                </div>
+                <button className="carDetail__car-customer-add-review-submit-btn">
+                  Add Review
+                </button>
+              </div>
+            </form>
             <div className="carDetail__car-review-customer-card-1">
               <div className="carDetail__car-review-customer-details-box">
                 <div className="carDetail__car-review-customer-avatar-and-name">
