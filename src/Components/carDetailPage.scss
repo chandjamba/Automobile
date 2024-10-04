@@ -401,9 +401,10 @@
   }
   &__car-customer-add-review-input-and-btn-wrapper {
     display: flex;
-    width: 100%;
+    width: 800px;
     height: auto;
     padding: 1rem;
+    align-items: center;
   }
   &__car-customer-add-review-input-box {
     display: flex;
@@ -411,10 +412,13 @@
     height: auto;
   }
   &__car-customer-add-review-input {
-    width: 90%;
-    height: 50px;
+    width: 95%;
+    height: 100px;
     padding: 1rem;
     outline: none;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
   }
   &__car-customer-add-review-submit-btn {
     display: flex;
@@ -492,7 +496,7 @@
   &__car-review-box {
     display: flex;
     height: 100%;
-    width: 710px;
+    width: 89%;
   }
   &__car-review {
     font-size: 12px;

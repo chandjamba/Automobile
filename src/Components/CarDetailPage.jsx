@@ -9,6 +9,7 @@ export default function CarDetailPage() {
   const [starValue, setStarValue] = useState();
   const [carDetail, setCarDetail] = useState();
   const [allCars, setAllCars] = useState();
+  const [allReviews, setAllReviews] = useState();
   const { carId } = useParams();
   useEffect(() => {
     async function getCarData() {
@@ -52,6 +53,13 @@ export default function CarDetailPage() {
 
   const reviewSubmitButtonHandler = async (event) => {
     event.preventDefault();
+    if (
+      !event.target.reviewText.value ||
+      event.target.reviewText.value.trim().length < 1
+    ) {
+      console.log("didn't run");
+      return;
+    }
     try {
       await databases.createDocument(
         import.meta.env.VITE_APPWRITE_DATABASE_ID,
@@ -69,6 +77,27 @@ export default function CarDetailPage() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    async function getCarReviews() {
+      try {
+        await databases
+          .listDocuments(
+            import.meta.env.VITE_APPWRITE_DATABASE_ID,
+            import.meta.env.VITE_APPWRITE_REVIEWS_COLLECTION_ID,
+            [Query.equal("carId", carId)]
+          )
+          .then((resp) => {
+            setAllReviews(resp.documents);
+            console.log(resp.documents, "all reviews");
+          });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getCarReviews();
+  }, [carId]);
+
   return (
     <div className="carDetail">
       <div className="carDetail__main-container">
@@ -276,6 +305,7 @@ export default function CarDetailPage() {
                     className="carDetail__car-customer-add-review-input"
                     placeholder="   Add your review here"
                     name="reviewText"
+                    required
                   />
                 </div>
                 <button className="carDetail__car-customer-add-review-submit-btn">
@@ -283,6 +313,58 @@ export default function CarDetailPage() {
                 </button>
               </div>
             </form>
+            {allReviews?.map((reviews) => {
+              return (
+                <div
+                  className="carDetail__car-review-customer-card-1"
+                  key={carId}
+                >
+                  <div className="carDetail__car-review-customer-details-box">
+                    <div className="carDetail__car-review-customer-avatar-and-name">
+                      <Avatar
+                        alt="C"
+                        src="/static/images/avatar/1.JPEG"
+                        sx={{
+                          width: 35,
+                          height: 35,
+                          backgroundColor: "rgba(182, 178, 178, 0.2)",
+                        }}
+                      />
+                      <div className="carDetail__car-review-customer-name-and-profession-box">
+                        <div className="carDetail__car-review-customer-name">
+                          Chand Jamba
+                        </div>
+                        <div className="carDetail__car-review-customer-profession">
+                          CEO at Amazon
+                        </div>
+                      </div>
+                    </div>
+                    <div className="carDetail__car-review-date-and-rating">
+                      <div className="carDetail__car-review-date">
+                        {new Date(reviews?.createdAt).toLocaleString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </div>
+                      <Rating
+                        name="simple-controlled"
+                        value={starValue}
+                        size="small"
+                        onChange={(newValue) => {
+                          setStarValue(newValue);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="carDetail__car-review-box">
+                    <p className="carDetail__car-review">
+                      {reviews?.reviewText}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
             <div className="carDetail__car-review-customer-card-1">
               <div className="carDetail__car-review-customer-details-box">
                 <div className="carDetail__car-review-customer-avatar-and-name">
@@ -325,90 +407,7 @@ export default function CarDetailPage() {
                 </p>
               </div>
             </div>
-            <div className="carDetail__car-review-customer-card-1">
-              <div className="carDetail__car-review-customer-details-box">
-                <div className="carDetail__car-review-customer-avatar-and-name">
-                  <Avatar
-                    alt="C"
-                    src="/static/images/avatar/1.JPEG"
-                    sx={{
-                      width: 35,
-                      height: 35,
-                      backgroundColor: "rgba(182, 178, 178, 0.2)",
-                    }}
-                  />
-                  <div className="carDetail__car-review-customer-name-and-profession-box">
-                    <div className="carDetail__car-review-customer-name">
-                      Chand Jamba
-                    </div>
-                    <div className="carDetail__car-review-customer-profession">
-                      CEO at Amazon
-                    </div>
-                  </div>
-                </div>
-                <div className="carDetail__car-review-date-and-rating">
-                  <div className="carDetail__car-review-date">21 July 2022</div>
-                  <Rating
-                    name="simple-controlled"
-                    value={starValue}
-                    size="small"
-                    onChange={(newValue) => {
-                      setStarValue(newValue);
-                    }}
-                  />
-                </div>
-              </div>
-              <div className="carDetail__car-review-box">
-                <p className="carDetail__car-review">
-                  We are very happy with the service from the MORENT App. Morent
-                  has a low price and also a large variety of cars with good and
-                  comfortable facilities. In addition, the service provided by
-                  the officers is also very friendly and very polite.
-                </p>
-              </div>
-            </div>
-            <div className="carDetail__car-review-customer-card-1">
-              <div className="carDetail__car-review-customer-details-box">
-                <div className="carDetail__car-review-customer-avatar-and-name">
-                  <Avatar
-                    alt="C"
-                    src="/static/images/avatar/1.JPEG"
-                    sx={{
-                      width: 35,
-                      height: 35,
-                      backgroundColor: "rgba(182, 178, 178, 0.2)",
-                    }}
-                  />
-                  <div className="carDetail__car-review-customer-name-and-profession-box">
-                    <div className="carDetail__car-review-customer-name">
-                      Chand Jamba
-                    </div>
-                    <div className="carDetail__car-review-customer-profession">
-                      CEO at Amazon
-                    </div>
-                  </div>
-                </div>
-                <div className="carDetail__car-review-date-and-rating">
-                  <div className="carDetail__car-review-date">21 July 2022</div>
-                  <Rating
-                    name="simple-controlled"
-                    value={starValue}
-                    size="small"
-                    onChange={(newValue) => {
-                      setStarValue(newValue);
-                    }}
-                  />
-                </div>
-              </div>
-              <div className="carDetail__car-review-box">
-                <p className="carDetail__car-review">
-                  We are very happy with the service from the MORENT App. Morent
-                  has a low price and also a large variety of cars with good and
-                  comfortable facilities. In addition, the service provided by
-                  the officers is also very friendly and very polite.
-                </p>
-              </div>
-            </div>
+
             <button className="carDetail__car-review-more-btn">
               Show More
             </button>
