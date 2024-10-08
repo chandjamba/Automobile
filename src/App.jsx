@@ -10,6 +10,10 @@ import Admin from "./Components/Admin";
 import CreateCarFormPage from "./Components/CreateCarFormPage";
 import CarDetailPage from "./Components/CarDetailPage";
 import CarPaymentPage from "./Components/CarPaymentPage";
+import SignUpPage from "./Components/SignUpPage";
+import SignInPage from "./Components/SignInPage";
+import VerifyEmailPage from "./Components/VerifyEmailPage";
+import ConfirmEmail from "./Components/ConfirmEmail";
 
 export default function App() {
   return (
@@ -18,6 +22,11 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/verify-email" element={<VerifyEmailPage />} />
+          <Route path="/confirm-email" element={<ConfirmEmail />} />
+
           <Route
             path="/homepage/CategoryCarRent"
             element={<CategoryCarRent />}
@@ -28,7 +37,10 @@ export default function App() {
             path="/homepage/CarDetailPage/:carId"
             element={<CarDetailPage />}
           />
-          <Route path="/homepage/CarDetailPage/:carId/carPaymentPage" element={<CarPaymentPage />} />
+          <Route
+            path="/homepage/CarDetailPage/:carId/carPaymentPage"
+            element={<CarPaymentPage />}
+          />
         </Routes>
       </main>
       <Footer />
