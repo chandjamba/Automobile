@@ -22,7 +22,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/signUp" element={<SignUpPage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
           <Route path="/confirm-email" element={<ConfirmEmail />} />

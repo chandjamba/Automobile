@@ -1,3 +1,5 @@
+import "./confirmEmail.scss";
+
 import { useSearchParams } from "react-router-dom";
 import { account } from "../lib/appwrite";
 import "./verifyEmailPage.scss";
@@ -15,9 +17,11 @@ export default function ConfirmEmail() {
   };
 
   return (
-    <button className="verifyEmail" onClick={verifyEmailHandler}>
-      {" "}
-      Confirm Email
-    </button>
+    <div className="confirmEmail">
+      <button className="confirmEmail__btn" onClick={verifyEmailHandler}>
+        {" "}
+        Verified
+      </button>
+    </div>
   );
 }
