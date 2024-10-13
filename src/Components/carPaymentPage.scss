@@ -5,6 +5,7 @@
   width: 100%;
   background-color: #002244;
   padding: 2rem;
+  justify-content: space-evenly;
   &__input-side-wrapper {
     display: flex;
     flex-direction: column;
@@ -96,16 +97,24 @@
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: white;
+    border-color: rgba(182, 178, 178, 0.2);
     outline: none;
     background-color: white;
     color: black;
+    background-color: rgba(182, 178, 178, 0.2);
   }
   &__billing-name-input:hover,
   &__billing-phone-input:hover,
   &__billing-address-input:hover,
   &__billing-town-input:hover {
-    border-color: rgba(182, 178, 178, 0.2);
+    border-color: white;
+  }
+  &__billing-name-input::placeholder,
+  &__billing-phone-input::placeholder,
+  &__billing-address-input::placeholder,
+  &__billing-town-input::placeholder {
+    color: white;
+    font-size: 12px;
   }
   // Rental inputs ******  Rental inputs ******  Rental inputs ******  Rental inputs ******  Rental inputs ****** Rental inputs //
   &__rental-info-box {
@@ -205,15 +214,24 @@
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: white;
+    border-color: rgba(182, 178, 178, 0.2);
     outline: none;
     background-color: white;
     color: black;
+    background-color: rgba(182, 178, 178, 0.2);
   }
+
   &__rental-pick-up-location-input:hover,
   &__rental-pick-up-date-input:hover,
   &__rental-pick-up-time-input:hover {
-    border-color: rgba(182, 178, 178, 0.2);
+    border-color: white;
+  }
+
+  &__rental-pick-up-location-input::placeholder,
+  &__rental-pick-up-date-input::placeholder,
+  &__rental-pick-up-time-input::placeholder {
+    color: white;
+    accent-color: white;
   }
   // drop off section **** drop off section **** drop off section **** drop off section **** //
   &__rental-drop-of-info-inputs-box {
@@ -257,15 +275,20 @@
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: white;
+    border-color: rgba(182, 178, 178, 0.2);
     outline: none;
-    background-color: white;
-    color: black;
+    background-color: rgba(182, 178, 178, 0.2);
   }
   &__rental-drop-of-location-input:hover,
   &__rental-drop-of-date-input:hover,
   &__rental-drop-of-time-input:hover {
-    border-color: rgba(182, 178, 178, 0.2);
+    border-color: white;
+  }
+
+  &__rental-drop-of-location-input::placeholder,
+  &__rental-drop-of-date-input::placeholder,
+  &__rental-drop-of-time-input::placeholder {
+    color: white;
   }
 
   // Payment Method Section Styling *****  Payment Method Section Styling *****  Payment Method Section Styling ***** //
@@ -470,17 +493,25 @@
     border: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: white;
+    border-color: rgba(182, 178, 178, 0.2);
     outline: none;
-    background-color: white;
+    background-color: rgba(182, 178, 178, 0.2);
     color: black;
   }
   &__payment-cardNumber-input:hover,
   &__payment-expiry-input:hover,
   &__payment-cardHolder-input:hover,
   &__payment-cvc-input:hover {
-    border-color: rgba(182, 178, 178, 0.2);
+    border-color: white;
   }
+
+  &__payment-cardNumber-input::placeholder,
+  &__payment-expiry-input::placeholder,
+  &__payment-cardHolder-input::placeholder,
+  &__payment-cvc-input::placeholder {
+    color: white;
+  }
+
   // confirmation section //
 
   &__confirmation-info-box {
@@ -537,7 +568,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 75%;
+    width: 65%;
   }
   &__confirmation-checkbox1-btn {
     display: flex;
@@ -550,7 +581,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 55%;
+    width: 47%;
   }
   &__confirmation-checkbox2-btn {
     display: flex;
@@ -582,5 +613,209 @@
   }
   &__confirmation-rentNow-submit-btn:hover {
     border-color: white;
+  }
+  &__confirmation-car-summary-side-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 500px;
+    margin: 80px 0 0 0;
+    align-items: center;
+  }
+  &__confirmation-car-summary-inner-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 460px;
+    justify-content: space-around;
+    padding: 1rem;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+    background-color: rgba(182, 178, 178, 0.2);
+  }
+  &__confirmation-car-inner-box-heading {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  &__confirmation-car-inner-box-heading-1 {
+    display: flex;
+    width: 50%;
+    height: 25px;
+  }
+  &__confirmation-car-inner-heading-1 {
+    font-size: 15px;
+    color: white;
+  }
+  &__confirmation-car-inner-box-heading-2 {
+    display: flex;
+    width: 80%;
+    height: 40px;
+  }
+  &__confirmation-car-inner-heading-2 {
+    font-size: 9px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  //__confirmation-car-summary-inner-picture-name-box //
+  &__confirmation-car-summary-inner-picture-name-box {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  &__confirmation-car-summary-picture-box {
+    display: flex;
+    height: 150px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__confirmation-car-summary-picture {
+    width: 190px;
+    height: 130px;
+    object-fit: scale-down;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  &__confirmation-car-summary-name-reviews-box {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 250px;
+    justify-content: center;
+  }
+  &__confirmation-car-summary-name-box {
+    display: flex;
+    width: 200px;
+    height: 40px;
+  }
+  &__confirmation-car-name {
+    font-size: 30px;
+    color: white;
+  }
+  &__confirmation-car-summary-reviews-box {
+    display: flex;
+    height: 25px;
+    width: 200px;
+    align-items: center;
+  }
+  &__confirmation-car-summary-reviews {
+    font-size: 13px;
+    color: white;
+  }
+  // __confirmation-car-final-price-info-box
+  &__confirmation-car-final-price-info-box {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  &__confirmation-car-subtotal-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__confirmation-car-subtotal-heading {
+    font-size: 13px;
+    color: white;
+  }
+  &__confirmation-car-subtotal-price {
+    font-size: 13px;
+    color: white;
+  }
+
+  // tax lane //
+  &__confirmation-car-tax-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__confirmation-car-tax-heading {
+    font-size: 13px;
+    color: white;
+  }
+  &__confirmation-car-tax {
+    font-size: 13px;
+    color: white;
+  }
+  &__confirmation-car-promo-input-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(182, 178, 178, 0.2);
+  }
+  &__confirmation-car-promo-input-box:hover {
+    border-color: white;
+  }
+  &__confirmation-car-promo-input {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    padding: 8px;
+    background-color: rgba(182, 178, 178, 0.2);
+    outline: none;
+    caret-color: white;
+    border: none;
+    font-size: 12px;
+    color: white;
+  }
+  &__confirmation-car-promo-input::placeholder {
+    color: white;
+  }
+  &__confirmation-car-promo-input-btn {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    background-color: rgba(182, 178, 178, 0.2);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+  }
+
+  // bottom box //
+  &__confirmation-car-price-bottom-box {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__confirmation-car-bottom-total-price-heading {
+    font-size: 13px;
+    color: white;
+  }
+  &__confirmation-car-total-price {
+    font-size: 13px;
+    color: white;
   }
 }

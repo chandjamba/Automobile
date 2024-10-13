@@ -273,7 +273,7 @@ export default function CarPaymentPage() {
             <div className="carPayment__payment-paypal-logo-box">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xml:space="preserve"
+                xmlSpace="preserve"
                 width="64"
                 height="64"
                 id="paypal"
@@ -396,8 +396,79 @@ export default function CarPaymentPage() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="carPayment__confirmation-car-summary-side-wrapper">
+        <div className="carPayment__confirmation-car-summary-inner-box">
+          <div className="carPayment__confirmation-car-inner-box-heading">
+            <div className="carPayment__confirmation-car-inner-box-heading-1">
+              <h1 className="carPayment__confirmation-car-inner-heading-1">
+                {" "}
+                Rental Summary
+              </h1>
+            </div>
+            <div className="carPayment__confirmation-car-inner-box-heading-2">
+              <h1 className="carPayment__confirmation-car-inner-heading-2">
+                {" "}
+                Prices may change depending on the length of the rental and the
+                price of your rental car.
+              </h1>
+            </div>
           </div>
-          <div className="carPayment__confirmation-car-summary-side-wrapper"></div>
+          <div className="carPayment__confirmation-car-summary-inner-picture-name-box">
+            <div className="carPayment__confirmation-car-summary-picture-box">
+              <img
+                className="carPayment__confirmation-car-summary-picture"
+                src="https://inventory-assets.motocommerce.ca/build_and_price/volkswagen/779684624/6l6l"
+              />
+            </div>
+            <div className="carPayment__confirmation-car-summary-name-reviews-box">
+              <div className="carPayment__confirmation-car-summary-name-box">
+                <h1 className="carPayment__confirmation-car-name">
+                  Nissan GT-R
+                </h1>
+              </div>
+              <div className="carPayment__confirmation-car-summary-reviews-box">
+                <div className="carPayment__confirmation-car-summary-reviews">
+                  {" "}
+                  440+ reviewers
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carPayment__confirmation-car-final-price-info-box">
+            <div className="carPayment__confirmation-car-subtotal-box">
+              <p className="carPayment__confirmation-car-subtotal-heading">
+                Subtotal
+              </p>
+              <div className="carPayment__confirmation-car-subtotal-price">
+                $80.00
+              </div>
+            </div>
+            <div className="carPayment__confirmation-car-tax-box">
+              <p className="carPayment__confirmation-car-tax-heading">Tax</p>
+              <div className="carPayment__confirmation-car-tax">$0.00</div>
+            </div>
+            <div className="carPayment__confirmation-car-promo-input-box">
+              <input
+                className="carPayment__confirmation-car-promo-input"
+                type="text"
+                placeholder="Apply promo here"
+              />
+              <button className="carPayment__confirmation-car-promo-input-btn">
+                Apply Now
+              </button>
+            </div>
+            <div className="carPayment__confirmation-car-price-bottom-box">
+              <p className="carPayment__confirmation-car-bottom-total-price-heading">
+                Total Rental Price
+              </p>
+              <div className="carPayment__confirmation-car-total-price">
+                $80.00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
