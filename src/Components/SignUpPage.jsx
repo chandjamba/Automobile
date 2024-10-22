@@ -20,9 +20,9 @@ export default function SignUpPage() {
       formDataObject.enterEmail,
       formDataObject.enterPassword
     );
-    // if (createdAccount.$id) {
-    //   navigate("/verify-email");
-    // }
+    if (createdAccount.$id) {
+      navigate("/verify-email");
+    }
 
     console.log(createdAccount);
   };
