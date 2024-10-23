@@ -235,8 +235,7 @@ export default function CarPaymentPage() {
                 </p>
                 <input
                   className="carPayment__payment-expiry-input"
-                  type="tel"
-                  placeholder="DD / MM / YY"
+                  type="date"
                 />
               </div>
               <div className="carPayment__payment-cardHolder-input-box">

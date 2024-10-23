@@ -217,7 +217,7 @@
     border-color: rgba(182, 178, 178, 0.2);
     outline: none;
     background-color: white;
-    color: black;
+    color: white;
     background-color: rgba(182, 178, 178, 0.2);
   }
 
@@ -225,6 +225,7 @@
   &__rental-pick-up-date-input:hover,
   &__rental-pick-up-time-input:hover {
     border-color: white;
+    background-color: darkgray;
   }
 
   &__rental-pick-up-location-input::placeholder,
@@ -278,17 +279,13 @@
     border-color: rgba(182, 178, 178, 0.2);
     outline: none;
     background-color: rgba(182, 178, 178, 0.2);
+    color: white;
   }
   &__rental-drop-of-location-input:hover,
   &__rental-drop-of-date-input:hover,
   &__rental-drop-of-time-input:hover {
     border-color: white;
-  }
-
-  &__rental-drop-of-location-input::placeholder,
-  &__rental-drop-of-date-input::placeholder,
-  &__rental-drop-of-time-input::placeholder {
-    color: white;
+    background-color: darkgray;
   }
 
   // Payment Method Section Styling *****  Payment Method Section Styling *****  Payment Method Section Styling ***** //
@@ -496,7 +493,7 @@
     border-color: rgba(182, 178, 178, 0.2);
     outline: none;
     background-color: rgba(182, 178, 178, 0.2);
-    color: black;
+    color: white;
   }
   &__payment-cardNumber-input:hover,
   &__payment-expiry-input:hover,
@@ -613,6 +610,8 @@
   }
   &__confirmation-rentNow-submit-btn:hover {
     border-color: white;
+    color: black;
+    background-color: white;
   }
   &__confirmation-car-summary-side-wrapper {
     display: flex;
