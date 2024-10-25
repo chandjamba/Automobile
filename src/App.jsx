@@ -14,6 +14,7 @@ import SignUpPage from "./Components/SignUpPage";
 import SignInPage from "./Components/SignInPage";
 import VerifyEmailPage from "./Components/VerifyEmailPage";
 import ConfirmEmail from "./Components/ConfirmEmail";
+import { AuthContextProvider } from "./contexts/AuthContext";
 
 export default function App() {
   return (
@@ -21,27 +22,31 @@ export default function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Homepage />} />
           <Route path="/signUp" element={<SignUpPage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
-          <Route path="/confirm-email" element={<ConfirmEmail />} />
-
-          <Route
-            path="/homepage/CategoryCarRent"
-            element={<CategoryCarRent />}
-          />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/createCarFormPage" element={<CreateCarFormPage />} />
-          <Route
-            path="/homepage/CarDetailPage/:carId"
-            element={<CarDetailPage />}
-          />
-          <Route
-            path="/homepage/CarDetailPage/:carId/carPaymentPage"
-            element={<CarPaymentPage />}
-          />
         </Routes>
+
+        <AuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/confirm-email" element={<ConfirmEmail />} />
+            <Route
+              path="/homepage/CategoryCarRent"
+              element={<CategoryCarRent />}
+            />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/createCarFormPage" element={<CreateCarFormPage />} />
+            <Route
+              path="/homepage/CarDetailPage/:carId"
+              element={<CarDetailPage />}
+            />
+            <Route
+              path="/homepage/CarDetailPage/:carId/carPaymentPage"
+              element={<CarPaymentPage />}
+            />
+          </Routes>
+        </AuthContextProvider>
       </main>
       <Footer />
     </BrowserRouter>

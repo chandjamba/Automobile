@@ -15,13 +15,31 @@ export default function SignUpPage() {
     const formData = new FormData(event.target);
     const formDataEntries = formData.entries();
     const formDataObject = Object.fromEntries(formDataEntries);
+    console.log(formDataObject);
+    // Step1 Create authUser/ account in appwrite. By the use of given below method.//
     const createdAccount = await account.create(
       ID.unique(),
       formDataObject.enterEmail,
       formDataObject.enterPassword
     );
+    // Step2 Asap the authUser created then, create login browser session with given below method. //
     if (createdAccount.$id) {
-      navigate("/verify-email");
+      await account.createEmailPasswordSession(
+        formDataObject.enterEmail,
+        formDataObject.enterPassword
+      );
+      // Step3 After signIn browser session created, Sent an email for user verification. //
+      const verification = await account.createVerification(
+        "http://localhost:5173/confirm-email"
+      );
+      console.log(verification);
+      //Step4 After sent an email for user verification delete the browser session. So, no any user can login without verification complete. //
+      // This step is for delete signIn browser session. //
+      const deleteAccountSession = await account.deleteSessions();
+      console.log(deleteAccountSession);
+      // Step5 Navigate the page direct to home page. //
+      // Just follow up the given 4 methods and enter to homepage of application. //
+      navigate("/signin");
     }
 
     console.log(createdAccount);
