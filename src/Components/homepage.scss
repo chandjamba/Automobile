@@ -13,6 +13,7 @@
     width: 1000px;
     align-items: center;
     justify-content: space-around;
+    margin: 100px 0 10px 0;
   }
   &__rental-car-card1 {
     display: flex;
@@ -553,3 +554,39 @@
     cursor: pointer;
   }
 }
+
+// MEDIA QUERIES FOR COMPONENTS STYLING//
+@media screen and (max-width: 1000px) {
+  .body {
+    width:100%;
+  }
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+    &__rental-car-cards-container {
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      margin: 100px 0 100px 0;
+    }
+    &__pick-drop-container {
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      margin: 50px 0 50px 0;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    
+  }
+  }

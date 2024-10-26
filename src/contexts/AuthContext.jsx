@@ -17,21 +17,21 @@ export function AuthContextProvider({ children }) {
   const [logedInUser, setLogedInUser] = useState();
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    async function getCurrentUser() {
-      try {
-        const user = await account.get();
-        console.log("user", user);
-        if (!user.emailVerification) {
-          await account.deleteSessions();
-          navigate("/signin");
-        }
-      } catch (error) {
-        navigate("/signin");
-      }
-    }
-    getCurrentUser();
-  }, []);
+  // useLayoutEffect(() => {
+  //   // async function getCurrentUser() {
+  //   //   try {
+  //   //     const user = await account.get();
+  //   //     console.log("user", user);
+  //   //     if (!user.emailVerification) {
+  //   //       await account.deleteSessions();
+  //   //       navigate("/signin");
+  //   //     }
+  //   //   } catch (error) {
+  //   //     navigate("/signin");
+  //   //   }
+  //   // }
+  //   getCurrentUser();
+  // }, []);
 
   return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
 }
