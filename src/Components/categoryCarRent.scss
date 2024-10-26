@@ -5,18 +5,21 @@
   width: 100%;
   background-color: #f1f1f1;
   justify-content: space-between;
+  
+  
   &__filter-sidebar {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 1200px;
     width: 15%;
     background-color: #f7f7f7;
     padding: 2rem;
+    margin-top: 80px;
   }
   &__all-filter-wrapper {
     display: flex;
     flex-direction: column;
-    height: 1250px;
+    height: 100%;
     background-color: #f7f7f7;
   }
   &__type-filter-box {
@@ -104,6 +107,7 @@
   &__seats-filter-check5,
   &__seats-filter-check6 {
     display: flex;
+    justify-content: left;
   }
   &__seats-filter1,
   &__seats-filter2,
@@ -130,6 +134,7 @@
   &__price-slider-input {
     display: flex;
   }
+  // car sides wrapper and the upper part is filter side wrapper. //
   &__cards-side-wrapper {
     display: flex;
     flex-direction: column;
@@ -137,159 +142,8 @@
     height: 100%;
     align-items: center;
     padding: 1rem;
+    margin: 80px 0 0 0;
   }
-  &__rental-car-cards-container {
-    display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 1000px;
-    align-items: center;
-    justify-content: space-around;
-  }
-  &__rental-car-card1 {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 250px;
-    background: radial-gradient(
-      circle at 10% 20%,
-      rgb(28, 142, 210) 0%,
-      rgb(113, 192, 244) 47.3%,
-      rgb(139, 238, 230) 88.4%
-    );
-    border: solid;
-    border-radius: 15px;
-    border-width: 1px;
-    border-color: #f7f7f7;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__card1-inside-components-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 220px;
-    width: 450px;
-    padding: 15px;
-    justify-content: space-between;
-  }
-  &__card-heading1-box {
-    display: flex;
-    height: 40px;
-    width: 150px;
-  }
-  &__card-heading1 {
-    color: #f7f7f7;
-    font-size: medium;
-    font-weight: bolder;
-  }
-  &__card-heading2-box {
-    display: flex;
-    height: 40px;
-    width: 165px;
-  }
-  &__card-heading2 {
-    color: #f7f7f7;
-    font-size: 10px;
-    font-weight: normal;
-  }
-  &__card-btn1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-color: #1f62ff;
-    color: #f7f7f7;
-    font-size: 12px;
-    width: 80px;
-    height: 25px;
-    border: solid;
-    border-radius: 3px;
-    border-width: 1px;
-    border-color: #1f62ff;
-    cursor: pointer;
-  }
-  &__card-btn1:hover {
-    border-color: #f0ffff;
-  }
-  &__car-card1-image {
-    width: 300px;
-    height: 200px;
-    object-fit: scale-down;
-  }
-
-  &__rental-car-card2 {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 250px;
-    background: radial-gradient(
-      circle at 10% 20%,
-      rgb(28, 142, 210) 0%,
-      rgb(113, 192, 244) 47.3%,
-      rgb(139, 238, 230) 88.4%
-    );
-    border: solid;
-    border-radius: 15px;
-    border-width: 1px;
-    border-color: #f7f7f7;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__card-2-inside-components-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 220px;
-    width: 450px;
-    padding: 15px;
-    justify-content: space-between;
-  }
-  &__card-heading-1-box {
-    display: flex;
-    height: 40px;
-    width: 150px;
-  }
-  &__card-heading-1 {
-    color: #f7f7f7;
-    font-size: medium;
-    font-weight: bolder;
-  }
-  &__card-heading-2-box {
-    display: flex;
-    height: 40px;
-    width: 160px;
-  }
-  &__card-heading-2 {
-    color: #f7f7f7;
-    font-size: 10px;
-    font-weight: normal;
-  }
-  &__card-btn-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-color: #1f62ff;
-    color: #f7f7f7;
-    font-size: 12px;
-    width: 80px;
-    height: 25px;
-    border: solid;
-    border-radius: 3px;
-    border-width: 1px;
-    border-color: #1f62ff;
-    cursor: pointer;
-  }
-  &__card-btn-1:hover {
-    border-color: #f0ffff;
-  }
-  &__car-card2-image {
-    width: 300px;
-    height: 200px;
-    object-fit: scale-down;
-  }
-
   &__pick-drop-container {
     display: flex;
     flex-direction: row;
@@ -297,7 +151,7 @@
     width: 910px;
     align-items: center;
     justify-content: space-around;
-    margin: 40px 0 20px 0;
+    margin: 50px 0 50px 0;
   }
   &__pickup-container {
     display: flex;
@@ -673,5 +527,77 @@
   &__show-more-btn:hover {
     border-color: #e6e4e4;
     cursor: pointer;
+  }
+}
+
+// Media qyeries section for components. //
+@media all and (min-width: 320px) {
+  .body {
+    width: 100%;
+  }
+  .categoryCarRent {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    &__pick-drop-container {
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      margin: 50px 0 50px 0;
+    }
+    &__filter-sidebar {
+      display: flex;
+      position: static;
+      flex-direction: column;
+      height: 3000px;
+      width: 25%;
+      background-color: #f7f7f7;
+      padding: 2rem;
+      margin-top: 80px;
+    }
+    &__cards-side-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      height: 100%;
+      align-items: center;
+      padding: 1rem;
+      margin: 80px 0 0 0;
+    }
+    
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .body {
+    width: 100%;
+  }
+  .categoryCarRent {
+    display: flex;
+    height: 100%;
+    &__pick-drop-container {
+      display: flex;
+      flex-direction: row;
+      height: 350px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      margin: 50px 0 50px 0;
+      
+    }
+    &__filter-sidebar {
+      display: flex;
+      position: static;
+      flex-direction: column;
+      height: 3000px;
+      width: 20%;
+      background-color: #f7f7f7;
+      padding: 2rem;
+      margin-top: 80px;
+    }
+    
   }
 }
