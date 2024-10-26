@@ -552,7 +552,7 @@
       display: flex;
       position: static;
       flex-direction: column;
-      height: 3000px;
+      height: 1200px;
       width: 25%;
       background-color: #f7f7f7;
       padding: 2rem;
@@ -565,7 +565,7 @@
       height: 100%;
       align-items: center;
       padding: 1rem;
-      margin: 80px 0 0 0;
+      margin: 40px 0 0 0;
     }
     
   }
@@ -575,13 +575,14 @@
   .body {
     width: 100%;
   }
+  
   .categoryCarRent {
     display: flex;
     height: 100%;
     &__pick-drop-container {
       display: flex;
       flex-direction: row;
-      height: 350px;
+      height: 200px;
       width: 100%;
       align-items: center;
       justify-content: space-around;
