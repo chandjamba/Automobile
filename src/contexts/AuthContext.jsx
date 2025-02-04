@@ -30,12 +30,27 @@ export function AuthContextProvider({ children }) {
     }
     getCurrentUser();
   }, []);
+  useLayoutEffect(() => {
+    async function getCurrentUser() {
+      try {
+        const user = await account.get();
+        console.log("user", user);
+        if (!user.emailVerification) {
+          await account.deleteSessions();
+          navigate("/signin");
+        }
+      } catch (error) {
+        navigate("/signin");
+      }
+    }
+    getCurrentUser();
+  }, []);
 
   return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
 }
 
 // Second step is to use the context by exporting a hook from this file
 // that uses and returns the value from useContext()
-export const useAuthContext = () => {
-  return useContext(AuthContext);
-};
+// export const useAuthContext = () => {
+//   return useContext(AuthContext);
+// };
