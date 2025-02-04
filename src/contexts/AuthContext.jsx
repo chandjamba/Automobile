@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 // third step is to export a components that accepts children and pass them to
 
 export function AuthContextProvider({ children }) {
-  const [logedInUser, setLogedInUser] = useState();
   const navigate = useNavigate();
 
   useLayoutEffect(() => {
