@@ -1,4 +1,4 @@
-import { createContext, useContext, useLayoutEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { account } from "../lib/appwrite";
 import { useNavigate } from "react-router-dom";
 //Step1 Create context. //
@@ -9,7 +9,7 @@ export const AuthContext = createContext();
 export function AuthContextProvider({ children }) {
   const navigate = useNavigate();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     async function getCurrentUser() {
       try {
         const user = await account.get();
@@ -23,7 +23,7 @@ export function AuthContextProvider({ children }) {
     }
     getCurrentUser();
   }, []);
-  useLayoutEffect(() => {
+  useEffect(() => {
     async function getCurrentUser() {
       try {
         const user = await account.get();
