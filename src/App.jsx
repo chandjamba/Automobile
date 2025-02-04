@@ -19,7 +19,6 @@ import { AuthContextProvider } from "./contexts/AuthContext";
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
       <main>
         <Routes>
           <Route path="/signUp" element={<SignUpPage />} />
@@ -28,6 +27,7 @@ export default function App() {
         </Routes>
 
         <AuthContextProvider>
+      <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/confirm-email" element={<ConfirmEmail />} />
