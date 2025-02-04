@@ -14,7 +14,6 @@ export function AuthContextProvider({ children }) {
     async function getCurrentUser() {
       try {
         const user = await account.get();
-        console.log("user", user);
         if (!user.emailVerification) {
           await account.deleteSessions();
           navigate("/signin");
@@ -29,7 +28,6 @@ export function AuthContextProvider({ children }) {
     async function getCurrentUser() {
       try {
         const user = await account.get();
-        console.log("user", user);
         if (!user.emailVerification) {
           await account.deleteSessions();
           navigate("/signin");
